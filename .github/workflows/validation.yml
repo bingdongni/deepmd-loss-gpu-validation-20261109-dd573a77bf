@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   cuda-loss:
-    runs-on: [self-hosted, Windows, X64, deepmd-loss-final-96bbd4b160]
+    runs-on: [self-hosted, Windows, X64, deepmd-huber-review-113fa82881]
     timeout-minutes: 20
     defaults:
       run:
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: bingdongni/deepmd-kit
-          ref: ce4da647e00955990978cb3eb66aa7d3c1149a56
+          ref: 755b8a4cfedaa866bb225bd3535485a5dc987218
           path: patched
           persist-credentials: false
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -35,9 +35,9 @@ jobs:
           persist-credentials: false
       - name: Verify pinned sources and CUDA device
         run: |
-          & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import hashlib,pathlib; pairs=[('patched/deepmd/pt/loss/ener.py', 'ab53defcd3e62119e7ae745011ce6697b9d3fe24718ba0e10b3e2da942c465d8'), ('patched/deepmd/pd/loss/ener.py', '8058eafd58d9abb50f61661dc992756480e4321ce14d5dba688c1ba45e86daa1'), ('patched/deepmd/pt/loss/ener_spin.py', 'cfec71946ac6ed74ac646e31586d1a1143bc6fa6eaf773b19947a47531e99bd9'), ('patched/deepmd/pt/loss/dos.py', 'aadcf0a606d64c9388b4656243e4bceadcba95fda403b54e7de904e1b2650be4'), ('patched/deepmd/utils/data.py', 'eb96080483e7ee380554b466e591ff772581dadb6c293c3bd303335a1e9f485b'), ('patched/source/tests/pt/test_loss_prefactor_schedule.py', '75929abd513959bd6ba4460dcc14824cee88647899f229e05aaa81c387ccb456'), ('patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py', '629e869385ec64db3399e783b89f208fef5d6320e443c93c7bed82deb9fe83bd'), ('patched/source/tests/common/test_single_frame_repeat.py', '3ab676d7be196b52ef46a6873695e1daf21b98fdddcfd72768951b0dd8f5b750'), ('baseline/deepmd/pt/loss/ener.py', '8752260710ee00e23aa50116a71a72eb954642ae3a67506bcc1445d7f85a45eb'), ('baseline/deepmd/pd/loss/ener.py', '4eed29551e39b05d6bbda21f377af1dbb5b6fa1032f918ad8a987833604e5b18'), ('baseline/deepmd/pt/loss/ener_spin.py', 'e95c3219e2a4b33be9c5945f59aee8bbe20c6cfb64525de55eb810514aed228f'), ('baseline/deepmd/pt/loss/dos.py', '6b7b61e42bb0d9596bf3bf29d325bbaecb56f557b85cfef1f325ec4777efc274'), ('baseline/deepmd/utils/data.py', 'b0695a4574225e459bc530653417f8368b6237d58f93a6496baefaed982a2f15'), ('deepmd_loss_source_runner_20261109.py', 'ed33efa8e3b384df2944e9f9a98763887a1d7f8510919d304648384808f0fe00')]; assert all(hashlib.sha256(pathlib.Path(p).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h for p,h in pairs); print('Source hashes verified')"
+          & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import hashlib,pathlib; pairs=[('patched/deepmd/pt/loss/ener.py', 'ab53defcd3e62119e7ae745011ce6697b9d3fe24718ba0e10b3e2da942c465d8'), ('patched/deepmd/pd/loss/ener.py', '015d5952190771ccf569d5202f7e6e2e87d738fe6efa323ec36c52c66b3463fb'), ('patched/deepmd/pt/loss/ener_spin.py', 'cfec71946ac6ed74ac646e31586d1a1143bc6fa6eaf773b19947a47531e99bd9'), ('patched/deepmd/pt/loss/dos.py', 'aadcf0a606d64c9388b4656243e4bceadcba95fda403b54e7de904e1b2650be4'), ('patched/deepmd/utils/data.py', 'eb96080483e7ee380554b466e591ff772581dadb6c293c3bd303335a1e9f485b'), ('patched/source/tests/pt/test_loss_prefactor_schedule.py', '39dcfce816d81b792fb07d589e9696ccf598b28da10e4f4c12122e153a9833f1'), ('patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py', '8b25674eb7c35adbed4ded9640a0fb8119b3cbaad044fdc39c7b38ca1141ed07'), ('patched/source/tests/common/test_single_frame_repeat.py', '4baaff01efccf7509914c89795f39595f8578fb77096b348f0777d530f095487'), ('baseline/deepmd/pt/loss/ener.py', '8752260710ee00e23aa50116a71a72eb954642ae3a67506bcc1445d7f85a45eb'), ('baseline/deepmd/pd/loss/ener.py', '4eed29551e39b05d6bbda21f377af1dbb5b6fa1032f918ad8a987833604e5b18'), ('baseline/deepmd/pt/loss/ener_spin.py', 'e95c3219e2a4b33be9c5945f59aee8bbe20c6cfb64525de55eb810514aed228f'), ('baseline/deepmd/pt/loss/dos.py', '6b7b61e42bb0d9596bf3bf29d325bbaecb56f557b85cfef1f325ec4777efc274'), ('baseline/deepmd/utils/data.py', 'b0695a4574225e459bc530653417f8368b6237d58f93a6496baefaed982a2f15'), ('deepmd_loss_source_runner_20261109.py', 'ed33efa8e3b384df2944e9f9a98763887a1d7f8510919d304648384808f0fe00')]; assert all(hashlib.sha256(pathlib.Path(p).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h for p,h in pairs); print('Source hashes verified')"
           if ($LASTEXITCODE -ne 0) { throw 'Source hash verification failed' }
-          Write-Host 'Patched commit: ce4da647e00955990978cb3eb66aa7d3c1149a56'
+          Write-Host 'Patched commit: 755b8a4cfedaa866bb225bd3535485a5dc987218'
           Write-Host 'Upstream baseline: 5485b3abccb221a304af5630545e02fd90d272f0'
           & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import torch; assert torch.cuda.is_available(); print('GPU:',torch.cuda.get_device_name(0),'PyTorch:',torch.__version__,'CUDA:',torch.version.cuda)"
           if ($LASTEXITCODE -ne 0) { throw 'CUDA device check failed' }
@@ -57,7 +57,7 @@ jobs:
           $output = & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' deepmd_loss_source_runner_20261109.py --noconftest --tb=no $pd $common 2>&1 | Out-String
           $code = $LASTEXITCODE
           Write-Host $output
-          if ($code -ne 1 -or $output -notmatch '42 failed, 10 passed') { throw 'Unexpected baseline Paddle result' }
+          if ($code -ne 1 -or $output -notmatch '44 failed, 11 passed') { throw 'Unexpected baseline Paddle result' }
           exit 0
       - name: Run patched PyTorch CUDA and Paddle CPU tests
         run: |
@@ -86,7 +86,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: bingdongni/deepmd-kit
-          ref: ce4da647e00955990978cb3eb66aa7d3c1149a56
+          ref: 755b8a4cfedaa866bb225bd3535485a5dc987218
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
