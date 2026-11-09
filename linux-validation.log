@@ -1,0 +1,450 @@
+2026-11-09T04:12:46.1842955Z Current runner version: '2.338.2'
+2026-11-09T04:12:46.1868692Z ##[group]Runner Image Provisioner
+2026-11-09T04:12:46.1869647Z Hosted Compute Agent
+2026-11-09T04:12:46.1870327Z Version: 20261028.624
+2026-11-09T04:12:46.1871037Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-09T04:12:46.1871792Z Build Date: 2026-10-28T21:51:42Z
+2026-11-09T04:12:46.1872555Z Worker ID: {a8c9028c-96b7-40f1-b679-10896eac7963}
+2026-11-09T04:12:46.1873282Z Region: westus2
+2026-11-09T04:12:46.1873823Z Cloud: Azure
+2026-11-09T04:12:46.1874466Z ##[endgroup]
+2026-11-09T04:12:46.1875967Z ##[group]Operating System
+2026-11-09T04:12:46.1876694Z Ubuntu
+2026-11-09T04:12:46.1877469Z 24.04.5
+2026-11-09T04:12:46.1878230Z LTS
+2026-11-09T04:12:46.1879030Z ##[endgroup]
+2026-11-09T04:12:46.1879618Z ##[group]Runner Image
+2026-11-09T04:12:46.1880267Z Image: ubuntu-24.04
+2026-11-09T04:12:46.1880867Z Version: 20261101.360.1
+2026-11-09T04:12:46.1882229Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-09T04:12:46.1883840Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-09T04:12:46.1884869Z ##[endgroup]
+2026-11-09T04:12:46.1886013Z ##[group]GITHUB_TOKEN Permissions
+2026-11-09T04:12:46.1888353Z Contents: read
+2026-11-09T04:12:46.1889057Z Metadata: read
+2026-11-09T04:12:46.1889640Z ##[endgroup]
+2026-11-09T04:12:46.1891808Z Secret source: Actions
+2026-11-09T04:12:46.1892813Z Cache mode: write
+2026-11-09T04:12:46.1893655Z Prepare workflow directory
+2026-11-09T04:12:46.2710075Z Prepare all required actions
+2026-11-09T04:12:46.2780311Z Getting action download info
+2026-11-09T04:12:46.8899455Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-11-09T04:12:47.0520886Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-09T04:12:47.2548316Z Complete job name: linux-package
+2026-11-09T04:12:47.3460200Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-09T04:12:47.3461400Z with:
+2026-11-09T04:12:47.3461905Z   repository: bingdongni/deepmd-kit
+2026-11-09T04:12:47.3462567Z   ref: 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:12:47.3463243Z   persist-credentials: false
+2026-11-09T04:12:47.3468857Z   token: ***
+2026-11-09T04:12:47.3469355Z   ssh-strict: true
+2026-11-09T04:12:47.3469846Z   ssh-user: git
+2026-11-09T04:12:47.3470305Z   clean: true
+2026-11-09T04:12:47.3470794Z   sparse-checkout-cone-mode: true
+2026-11-09T04:12:47.3471376Z   fetch-depth: 1
+2026-11-09T04:12:47.3471847Z   fetch-tags: false
+2026-11-09T04:12:47.3472346Z   show-progress: true
+2026-11-09T04:12:47.3472838Z   lfs: false
+2026-11-09T04:12:47.3473296Z   submodules: false
+2026-11-09T04:12:47.3473783Z   set-safe-directory: true
+2026-11-09T04:12:47.3474586Z env:
+2026-11-09T04:12:47.3475073Z   DP_ENABLE_PYTORCH: 1
+2026-11-09T04:12:47.3475619Z   CMAKE_POLICY_VERSION_MINIMUM: 3.5
+2026-11-09T04:12:47.3476280Z   UV_HTTP_TIMEOUT: 120
+2026-11-09T04:12:47.3476781Z   NUM_WORKERS: 0
+2026-11-09T04:12:47.3477244Z   DEVICE: cpu
+2026-11-09T04:12:47.3477706Z ##[endgroup]
+2026-11-09T04:12:47.6868722Z Syncing repository: bingdongni/deepmd-kit
+2026-11-09T04:12:47.6875869Z ##[group]Getting Git version info
+2026-11-09T04:12:47.6879972Z Working directory is '/home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf'
+2026-11-09T04:12:47.6886622Z [command]/usr/bin/git version
+2026-11-09T04:12:47.6888448Z git version 2.56.0
+2026-11-09T04:12:47.6892472Z ##[endgroup]
+2026-11-09T04:12:47.6948443Z Temporarily overriding HOME='/home/runner/work/_temp/601c238a-96cb-4ecb-a130-6b1e2acd5e03' before making global git config changes
+2026-11-09T04:12:47.6973494Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:12:47.7001457Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:47.7036328Z Deleting the contents of '/home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf'
+2026-11-09T04:12:47.7050761Z ##[group]Initializing the repository
+2026-11-09T04:12:47.7080687Z [command]/usr/bin/git init /home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:47.7202409Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T04:12:47.7224629Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T04:12:47.7249609Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T04:12:47.7251610Z hint: call:
+2026-11-09T04:12:47.7289132Z hint:
+2026-11-09T04:12:47.7290292Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T04:12:47.7309574Z hint:
+2026-11-09T04:12:47.7530288Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T04:12:47.7539486Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T04:12:47.7542870Z hint:
+2026-11-09T04:12:47.7543957Z hint: 	git branch -m <name>
+2026-11-09T04:12:47.7549571Z hint:
+2026-11-09T04:12:47.7551151Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T04:12:47.7557228Z Initialized empty Git repository in /home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf/.git/
+2026-11-09T04:12:47.7565509Z [command]/usr/bin/git remote add origin https://github.com/bingdongni/deepmd-kit
+2026-11-09T04:12:47.7580443Z ##[endgroup]
+2026-11-09T04:12:47.7582426Z ##[group]Disabling automatic garbage collection
+2026-11-09T04:12:47.7584174Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-09T04:12:47.7587623Z ##[endgroup]
+2026-11-09T04:12:47.7589552Z ##[group]Setting up auth
+2026-11-09T04:12:47.7591711Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:12:47.7597550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T04:12:47.8029220Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:12:47.8115257Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T04:12:47.8373588Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-09T04:12:47.8430380Z ##[endgroup]
+2026-11-09T04:12:47.8432428Z ##[group]Fetching the repository
+2026-11-09T04:12:47.8445536Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:12:50.2705395Z From https://github.com/bingdongni/deepmd-kit
+2026-11-09T04:12:50.2707137Z  * branch            7a7a13dfcb8e6c5f653852fcc4b26280f0932952 -> FETCH_HEAD
+2026-11-09T04:12:50.2744099Z ##[endgroup]
+2026-11-09T04:12:50.2745103Z ##[group]Determining the checkout info
+2026-11-09T04:12:50.2746274Z ##[endgroup]
+2026-11-09T04:12:50.2751099Z [command]/usr/bin/git sparse-checkout disable
+2026-11-09T04:12:50.2809466Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-09T04:12:50.2854820Z ##[group]Checking out the ref
+2026-11-09T04:12:50.2869417Z [command]/usr/bin/git checkout --progress --force 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:12:50.6682360Z Note: switching to '7a7a13dfcb8e6c5f653852fcc4b26280f0932952'.
+2026-11-09T04:12:50.6697834Z 
+2026-11-09T04:12:50.6699115Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-09T04:12:50.6700409Z changes and commit them, and you can discard any commits you make in this
+2026-11-09T04:12:50.6701967Z state without impacting any branches by switching back to a branch.
+2026-11-09T04:12:50.6702794Z 
+2026-11-09T04:12:50.6703342Z If you want to create a new branch to retain commits you create, you may
+2026-11-09T04:12:50.6704316Z do so (now or later) by using -c with the switch command. Example:
+2026-11-09T04:12:50.6704941Z 
+2026-11-09T04:12:50.6705313Z   git switch -c <new-branch-name>
+2026-11-09T04:12:50.6705838Z 
+2026-11-09T04:12:50.6706204Z Or undo this operation with:
+2026-11-09T04:12:50.6706672Z 
+2026-11-09T04:12:50.6707003Z   git switch -
+2026-11-09T04:12:50.6707795Z 
+2026-11-09T04:12:50.6708461Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-09T04:12:50.6709378Z 
+2026-11-09T04:12:50.6709918Z HEAD is now at 7a7a13d fix(loss): retain terms with a zero schedule endpoint
+2026-11-09T04:12:50.6724732Z ##[endgroup]
+2026-11-09T04:12:50.6787444Z [command]/usr/bin/git log -1 --format=%H
+2026-11-09T04:12:50.6841977Z 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:12:50.6852740Z ##[group]Removing auth
+2026-11-09T04:12:50.6859243Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:12:50.6903807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T04:12:50.7169555Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:12:50.7209244Z http.https://github.com/.extraheader
+2026-11-09T04:12:50.7220321Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-09T04:12:50.7269154Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T04:12:50.7526982Z ##[endgroup]
+2026-11-09T04:12:50.7805669Z ##[group]Run actions/setup-python@v5
+2026-11-09T04:12:50.7805997Z with:
+2026-11-09T04:12:50.7806211Z   python-version: 3.10
+2026-11-09T04:12:50.7806452Z   check-latest: false
+2026-11-09T04:12:50.7809261Z   token: ***
+2026-11-09T04:12:50.7809498Z   update-environment: true
+2026-11-09T04:12:50.7809759Z   allow-prereleases: false
+2026-11-09T04:12:50.7810011Z   freethreaded: false
+2026-11-09T04:12:50.7810229Z env:
+2026-11-09T04:12:50.7810427Z   DP_ENABLE_PYTORCH: 1
+2026-11-09T04:12:50.7810665Z   CMAKE_POLICY_VERSION_MINIMUM: 3.5
+2026-11-09T04:12:50.7810936Z   UV_HTTP_TIMEOUT: 120
+2026-11-09T04:12:50.7811156Z   NUM_WORKERS: 0
+2026-11-09T04:12:50.7811371Z   DEVICE: cpu
+2026-11-09T04:12:50.7811575Z ##[endgroup]
+2026-11-09T04:12:50.9328541Z ##[group]Installed versions
+2026-11-09T04:12:50.9423815Z Version 3.10 was not found in the local cache
+2026-11-09T04:12:50.9626977Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T04:12:50.9628903Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T04:12:51.7655080Z Version 3.10 is available for downloading
+2026-11-09T04:12:51.7655752Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-24.04-x64.tar.gz"
+2026-11-09T04:12:52.3397942Z Extract downloaded archive
+2026-11-09T04:12:52.3570129Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/dcd25962-e5c5-4bca-8a30-bffc5b83131d -f /home/runner/work/_temp/19492248-bbd4-4932-9f59-ca51c012d84b
+2026-11-09T04:12:53.8732179Z Execute installation script
+2026-11-09T04:12:53.8874540Z Check if Python hostedtoolcache folder exist...
+2026-11-09T04:12:53.8876747Z Create Python 3.10.22 folder
+2026-11-09T04:12:53.8890540Z Copy Python binaries to hostedtoolcache folder
+2026-11-09T04:12:54.3633802Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-09T04:12:54.3682056Z Upgrading pip...
+2026-11-09T04:12:56.2595764Z Collecting pip
+2026-11-09T04:12:56.3058954Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-09T04:12:56.3878477Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 24.7 MB/s eta 0:00:00
+2026-11-09T04:12:56.3884788Z 
+2026-11-09T04:12:56.4503174Z Installing collected packages: pip
+2026-11-09T04:12:56.4505547Z Attempting uninstall: pip
+2026-11-09T04:12:56.4518921Z Found existing installation: pip 23.0.1
+2026-11-09T04:12:56.6231894Z Uninstalling pip-23.0.1:
+2026-11-09T04:12:56.6307939Z Successfully uninstalled pip-23.0.1
+2026-11-09T04:12:57.5439310Z Successfully installed pip-26.3
+2026-11-09T04:12:57.5981891Z Create complete file
+2026-11-09T04:12:57.6033748Z Successfully set up CPython (3.10.22)
+2026-11-09T04:12:57.6035417Z ##[endgroup]
+2026-11-09T04:12:57.6251241Z ##[group]Run python -m pip install uv
+2026-11-09T04:12:57.6251643Z python -m pip install uv
+2026-11-09T04:12:57.6252167Z uv pip install --system --group pin_tensorflow_cpu --group pin_pytorch_cpu --torch-backend cpu
+2026-11-09T04:12:57.6283559Z shell: /usr/bin/bash -e {0}
+2026-11-09T04:12:57.6283830Z env:
+2026-11-09T04:12:57.6284033Z   DP_ENABLE_PYTORCH: 1
+2026-11-09T04:12:57.6284287Z   CMAKE_POLICY_VERSION_MINIMUM: 3.5
+2026-11-09T04:12:57.6284578Z   UV_HTTP_TIMEOUT: 120
+2026-11-09T04:12:57.6284802Z   NUM_WORKERS: 0
+2026-11-09T04:12:57.6285010Z   DEVICE: cpu
+2026-11-09T04:12:57.6285288Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:12:57.6285747Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-09T04:12:57.6286189Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:12:57.6286583Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:12:57.6287014Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:12:57.6287413Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-09T04:12:57.6287762Z ##[endgroup]
+2026-11-09T04:12:58.6773638Z Collecting uv
+2026-11-09T04:12:58.7367378Z   Downloading uv-0.13.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+2026-11-09T04:12:58.7481739Z Downloading uv-0.13.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.2 MB)
+2026-11-09T04:12:59.0277879Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.2/17.2 MB 66.7 MB/s  0:00:00
+2026-11-09T04:12:59.0836531Z Installing collected packages: uv
+2026-11-09T04:12:59.3805350Z Successfully installed uv-0.13.7
+2026-11-09T04:12:59.5356894Z Using Python 3.10.22 environment at: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:00.5134223Z Resolved 40 packages in 976ms
+2026-11-09T04:13:00.5298906Z Downloading sympy (6.0MiB)
+2026-11-09T04:13:00.5427499Z Downloading grpcio (7.0MiB)
+2026-11-09T04:13:00.5455601Z Downloading torch (181.4MiB)
+2026-11-09T04:13:00.5581332Z Downloading libclang (23.4MiB)
+2026-11-09T04:13:00.5582405Z Downloading pygments (1.2MiB)
+2026-11-09T04:13:00.5583987Z Downloading numpy (16.0MiB)
+2026-11-09T04:13:00.5585425Z Downloading networkx (1.6MiB)
+2026-11-09T04:13:00.5782175Z Downloading h5py (4.3MiB)
+2026-11-09T04:13:00.5784556Z Downloading tensorflow-cpu (260.9MiB)
+2026-11-09T04:13:00.6406312Z Downloading keras (2.0MiB)
+2026-11-09T04:13:00.8999818Z  Downloaded pygments
+2026-11-09T04:13:00.9015898Z  Downloaded networkx
+2026-11-09T04:13:01.0259628Z  Downloaded h5py
+2026-11-09T04:13:01.0308828Z  Downloaded keras
+2026-11-09T04:13:01.0750080Z  Downloaded grpcio
+2026-11-09T04:13:01.2297387Z  Downloaded sympy
+2026-11-09T04:13:01.2807672Z  Downloaded numpy
+2026-11-09T04:13:01.5731153Z  Downloaded libclang
+2026-11-09T04:13:05.0079089Z  Downloaded torch
+2026-11-09T04:13:10.5991666Z  Downloaded tensorflow-cpu
+2026-11-09T04:13:10.6243887Z Prepared 39 packages in 10.11s
+2026-11-09T04:13:11.5524164Z Installed 39 packages in 927ms
+2026-11-09T04:13:11.5524978Z  + absl-py==2.5.1
+2026-11-09T04:13:11.5525779Z  + astunparse==1.6.3
+2026-11-09T04:13:11.5526376Z  + certifi==2026.10.23
+2026-11-09T04:13:11.5527339Z  + charset-normalizer==3.5.2
+2026-11-09T04:13:11.5528183Z  + filelock==4.1.0
+2026-11-09T04:13:11.5528973Z  + flatbuffers==25.12.19
+2026-11-09T04:13:11.5529575Z  + fsspec==2026.9.0
+2026-11-09T04:13:11.5530105Z  + gast==0.7.0
+2026-11-09T04:13:11.5530650Z  + google-pasta==0.2.0
+2026-11-09T04:13:11.5531199Z  + grpcio==1.85.1
+2026-11-09T04:13:11.5531720Z  + h5py==3.14.0
+2026-11-09T04:13:11.5532237Z  + idna==3.20
+2026-11-09T04:13:11.5532746Z  + jinja2==3.1.6
+2026-11-09T04:13:11.5533261Z  + keras==3.12.4
+2026-11-09T04:13:11.5533785Z  + libclang==18.1.1
+2026-11-09T04:13:11.5534358Z  + markdown-it-py==4.2.0
+2026-11-09T04:13:11.5534943Z  + markupsafe==3.0.4
+2026-11-09T04:13:11.5535480Z  + mdurl==0.1.2
+2026-11-09T04:13:11.5536003Z  + ml-dtypes==0.6.0
+2026-11-09T04:13:11.5536536Z  + mpmath==1.3.0
+2026-11-09T04:13:11.5537345Z  + namex==0.1.0
+2026-11-09T04:13:11.5537878Z  + networkx==3.4.2
+2026-11-09T04:13:11.5538700Z  + numpy==2.2.6
+2026-11-09T04:13:11.5539254Z  + opt-einsum==3.4.0
+2026-11-09T04:13:11.5539792Z  + optree==0.20.0
+2026-11-09T04:13:11.5540306Z  + packaging==26.3
+2026-11-09T04:13:11.5540851Z  + protobuf==7.36.2
+2026-11-09T04:13:11.5541391Z  + pygments==2.21.0
+2026-11-09T04:13:11.5541956Z  + requests==2.34.2
+2026-11-09T04:13:11.5542474Z  + rich==15.0.0
+2026-11-09T04:13:11.5542978Z  + six==1.17.0
+2026-11-09T04:13:11.5543496Z  + sympy==1.14.0
+2026-11-09T04:13:11.5544047Z  + tensorflow-cpu==2.21.0
+2026-11-09T04:13:11.5544711Z  + termcolor==3.3.0
+2026-11-09T04:13:11.5545254Z  + torch==2.11.0+cpu
+2026-11-09T04:13:11.5545861Z  + typing-extensions==4.16.0
+2026-11-09T04:13:11.5546438Z  + urllib3==2.8.0
+2026-11-09T04:13:11.5546948Z  + wheel==0.48.0
+2026-11-09T04:13:11.5547472Z  + wrapt==2.5.2
+2026-11-09T04:13:11.5667659Z ##[group]Run uv pip install --system -e '.[cpu,test,torch]' paddlepaddle==3.3.1
+2026-11-09T04:13:11.5668751Z uv pip install --system -e '.[cpu,test,torch]' paddlepaddle==3.3.1
+2026-11-09T04:13:11.5689893Z shell: /usr/bin/bash -e {0}
+2026-11-09T04:13:11.5690148Z env:
+2026-11-09T04:13:11.5690364Z   DP_ENABLE_PYTORCH: 1
+2026-11-09T04:13:11.5690609Z   CMAKE_POLICY_VERSION_MINIMUM: 3.5
+2026-11-09T04:13:11.5690874Z   UV_HTTP_TIMEOUT: 120
+2026-11-09T04:13:11.5691104Z   NUM_WORKERS: 0
+2026-11-09T04:13:11.5691307Z   DEVICE: cpu
+2026-11-09T04:13:11.5691587Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:11.5692048Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-09T04:13:11.5692510Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:11.5692908Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:11.5693301Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:11.5693731Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-09T04:13:11.5694064Z ##[endgroup]
+2026-11-09T04:13:11.6655831Z Using Python 3.10.22 environment at: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:13:44.5990380Z Resolved 131 packages in 32.93s
+2026-11-09T04:13:44.6062497Z    Building deepmd-kit @ file:///home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:13:44.6259296Z Downloading kiwisolver (1.6MiB)
+2026-11-09T04:13:44.6539080Z Downloading fonttools (5.0MiB)
+2026-11-09T04:13:44.6593035Z Downloading scikit-learn (9.2MiB)
+2026-11-09T04:13:44.6618696Z Downloading pillow (6.6MiB)
+2026-11-09T04:13:44.6712649Z Downloading pandas (12.2MiB)
+2026-11-09T04:13:44.6713727Z Downloading sqlalchemy (3.2MiB)
+2026-11-09T04:13:44.6716876Z Downloading mendeleev (1.3MiB)
+2026-11-09T04:13:44.6717969Z Downloading paddlepaddle (185.8MiB)
+2026-11-09T04:13:44.6787485Z Downloading pydantic-core (2.2MiB)
+2026-11-09T04:13:44.7042289Z Downloading dpgui (2.2MiB)
+2026-11-09T04:13:44.7072049Z Downloading ase (2.9MiB)
+2026-11-09T04:13:44.7208951Z Downloading matplotlib (8.4MiB)
+2026-11-09T04:13:45.0836930Z  Downloaded mendeleev
+2026-11-09T04:13:45.0928819Z  Downloaded kiwisolver
+2026-11-09T04:13:45.1321771Z  Downloaded pydantic-core
+2026-11-09T04:13:45.1669401Z  Downloaded dpgui
+2026-11-09T04:13:45.2666721Z  Downloaded sqlalchemy
+2026-11-09T04:13:45.4007044Z  Downloaded fonttools
+2026-11-09T04:13:45.4165899Z  Downloaded pillow
+2026-11-09T04:13:45.4889471Z  Downloaded ase
+2026-11-09T04:13:45.5291470Z  Downloaded scikit-learn
+2026-11-09T04:13:45.5368923Z  Downloaded matplotlib
+2026-11-09T04:13:45.6807984Z  Downloaded pandas
+2026-11-09T04:13:49.2217275Z  Downloaded paddlepaddle
+2026-11-09T04:18:28.2639390Z       Built deepmd-kit @ file:///home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:18:28.2740611Z Prepared 64 packages in 4m 43s
+2026-11-09T04:18:28.4692106Z Uninstalled 2 packages in 194ms
+2026-11-09T04:18:28.9299017Z Installed 93 packages in 460ms
+2026-11-09T04:18:28.9304435Z  + annotated-types==0.8.0
+2026-11-09T04:18:28.9305112Z  + anyio==4.16.0
+2026-11-09T04:18:28.9305797Z  + array-api-compat==1.16.0
+2026-11-09T04:18:28.9306426Z  + array-api-strict==2.6.1
+2026-11-09T04:18:28.9307038Z  + ase==3.29.0
+2026-11-09T04:18:28.9307579Z  + attrs==26.1.0
+2026-11-09T04:18:28.9308333Z  + bracex==3.1
+2026-11-09T04:18:28.9308882Z  + cloudpickle==3.1.2
+2026-11-09T04:18:28.9309453Z  + colorama==0.4.6
+2026-11-09T04:18:28.9309992Z  + contourpy==1.3.2
+2026-11-09T04:18:28.9310530Z  + coverage==7.16.2
+2026-11-09T04:18:28.9311071Z  + cuda-bindings==13.4.4
+2026-11-09T04:18:28.9311650Z  + cuda-pathfinder==1.8.3
+2026-11-09T04:18:28.9312234Z  + cuda-toolkit==13.0.3.0
+2026-11-09T04:18:28.9312803Z  + cycler==0.12.1
+2026-11-09T04:18:28.9313320Z  + dargs==0.5.1
+2026-11-09T04:18:28.9314996Z  + deepmd-kit==0.1.dev1+g7a7a13dfc (from file:///home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf)
+2026-11-09T04:18:28.9316496Z  + dependency-groups==1.3.2
+2026-11-09T04:18:28.9317100Z  + deprecated==1.3.1
+2026-11-09T04:18:28.9317638Z  + dpdata==1.1.0
+2026-11-09T04:18:28.9318344Z  + dpgui==1.0.1
+2026-11-09T04:18:28.9318870Z  + e3nn==0.6.0
+2026-11-09T04:18:28.9319393Z  + einops==0.8.2
+2026-11-09T04:18:28.9319926Z  + exceptiongroup==1.3.1
+2026-11-09T04:18:28.9320494Z  + flexcache==0.3
+2026-11-09T04:18:28.9321017Z  + flexparser==0.4
+2026-11-09T04:18:28.9321548Z  + fonttools==4.65.0
+2026-11-09T04:18:28.9322079Z  + greenlet==3.5.6
+2026-11-09T04:18:28.9322665Z  + h11==0.16.0
+2026-11-09T04:18:28.9323186Z  + httpcore==1.0.9
+2026-11-09T04:18:28.9323727Z  + httpx==0.28.1
+2026-11-09T04:18:28.9324246Z  + iniconfig==2.3.1
+2026-11-09T04:18:28.9324794Z  + joblib==1.6.0
+2026-11-09T04:18:28.9325318Z  + jsonschema==4.26.0
+2026-11-09T04:18:28.9325903Z  + jsonschema-specifications==2025.9.1
+2026-11-09T04:18:28.9326549Z  + kiwisolver==1.5.1
+2026-11-09T04:18:28.9327090Z  + lmdb==3.0.0
+2026-11-09T04:18:28.9327613Z  + matplotlib==3.10.9
+2026-11-09T04:18:28.9328316Z  + mendeleev==1.3.0
+2026-11-09T04:18:28.9328864Z  + msgpack==1.2.4
+2026-11-09T04:18:28.9329397Z  + nvidia-cublas==13.1.1.3
+2026-11-09T04:18:28.9329989Z  + nvidia-cuda-cupti==13.0.85
+2026-11-09T04:18:28.9330609Z  + nvidia-cuda-nvrtc==13.0.88
+2026-11-09T04:18:28.9331219Z  + nvidia-cuda-runtime==13.0.96
+2026-11-09T04:18:28.9331830Z  + nvidia-cudnn-cu13==9.24.0.43
+2026-11-09T04:18:28.9332433Z  + nvidia-cufft==12.0.0.61
+2026-11-09T04:18:28.9333007Z  + nvidia-cufile==1.15.1.6
+2026-11-09T04:18:28.9333583Z  + nvidia-curand==10.4.0.35
+2026-11-09T04:18:28.9334171Z  + nvidia-cusolver==12.0.4.66
+2026-11-09T04:18:28.9334769Z  + nvidia-cusparse==12.6.3.3
+2026-11-09T04:18:28.9335362Z  + nvidia-cusparselt-cu13==0.8.1
+2026-11-09T04:18:28.9335950Z  + nvidia-nccl-cu13==2.30.7
+2026-11-09T04:18:28.9336516Z  + nvidia-nvjitlink==13.5.37
+2026-11-09T04:18:28.9337094Z  + nvidia-nvshmem-cu13==3.4.5
+2026-11-09T04:18:28.9337662Z  + nvidia-nvtx==13.0.85
+2026-11-09T04:18:28.9338400Z  - opt-einsum==3.4.0
+2026-11-09T04:18:28.9338938Z  + opt-einsum==3.3.0
+2026-11-09T04:18:28.9339472Z  + opt-einsum-fx==0.1.4
+2026-11-09T04:18:28.9340029Z  + paddlepaddle==3.3.1
+2026-11-09T04:18:28.9340684Z  + pandas==2.3.3
+2026-11-09T04:18:28.9341292Z  + pillow==12.3.0
+2026-11-09T04:18:28.9342126Z  + pint==0.24.4
+2026-11-09T04:18:28.9342654Z  + platformdirs==4.12.4
+2026-11-09T04:18:28.9343189Z  + pluggy==1.7.0
+2026-11-09T04:18:28.9344390Z  + pydantic==2.14.3
+2026-11-09T04:18:28.9345125Z  + pydantic-core==2.50.4
+2026-11-09T04:18:28.9345704Z  + pyfiglet==0.8.post1
+2026-11-09T04:18:28.9346414Z  + pyparsing==3.3.3
+2026-11-09T04:18:28.9346974Z  + pytest==9.2.0
+2026-11-09T04:18:28.9347532Z  + pytest-cov==7.1.0
+2026-11-09T04:18:28.9348288Z  + pytest-split==0.11.0
+2026-11-09T04:18:28.9348893Z  + pytest-sugar==1.1.1
+2026-11-09T04:18:28.9349509Z  + pytest-timeout==2.4.0
+2026-11-09T04:18:28.9350124Z  + python-dateutil==3.0.0
+2026-11-09T04:18:28.9350721Z  + pytz==2026.6
+2026-11-09T04:18:28.9351274Z  + pyyaml==6.0.3
+2026-11-09T04:18:28.9351837Z  + referencing==0.37.0
+2026-11-09T04:18:28.9352416Z  + rpds-py==0.30.0
+2026-11-09T04:18:28.9352981Z  + safetensors==0.8.0
+2026-11-09T04:18:28.9353760Z  + scikit-learn==1.7.2
+2026-11-09T04:18:28.9358430Z  + scipy==1.15.3
+2026-11-09T04:18:28.9359078Z  + sqlalchemy==2.0.57
+2026-11-09T04:18:28.9359681Z  + threadpoolctl==3.8.0
+2026-11-09T04:18:28.9360280Z  + tomli==2.5.0
+2026-11-09T04:18:28.9360828Z  - torch==2.11.0+cpu
+2026-11-09T04:18:28.9361388Z  + torch==2.14.1
+2026-11-09T04:18:28.9361930Z  + triton==3.8.0
+2026-11-09T04:18:28.9362476Z  + typeguard==4.6.0
+2026-11-09T04:18:28.9363060Z  + typing-inspection==0.4.5
+2026-11-09T04:18:28.9363659Z  + tzdata==2026.6
+2026-11-09T04:18:28.9364179Z  + vesin==0.6.2
+2026-11-09T04:18:28.9364702Z  + vesin-torch==0.6.2
+2026-11-09T04:18:28.9365247Z  + waitress==3.0.2
+2026-11-09T04:18:28.9365834Z  + wcmatch==11.1
+2026-11-09T04:18:28.9366374Z  + werkzeug==3.1.9
+2026-11-09T04:18:29.4082246Z ##[group]Run dp --version
+2026-11-09T04:18:29.4082570Z dp --version
+2026-11-09T04:18:29.4083123Z python -m pytest -q source/tests/pt/test_loss_prefactor_schedule.py source/tests/pd/test_loss_prefactor_schedule_paddle.py
+2026-11-09T04:18:29.4350602Z shell: /usr/bin/bash -e {0}
+2026-11-09T04:18:29.4350882Z env:
+2026-11-09T04:18:29.4351109Z   DP_ENABLE_PYTORCH: 1
+2026-11-09T04:18:29.4351372Z   CMAKE_POLICY_VERSION_MINIMUM: 3.5
+2026-11-09T04:18:29.4351648Z   UV_HTTP_TIMEOUT: 120
+2026-11-09T04:18:29.4351866Z   NUM_WORKERS: 0
+2026-11-09T04:18:29.4352072Z   DEVICE: cpu
+2026-11-09T04:18:29.4352354Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:18:29.4352812Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-09T04:18:29.4353262Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:18:29.4353658Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:18:29.4354108Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-09T04:18:29.4354525Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-09T04:18:29.4354876Z ##[endgroup]
+2026-11-09T04:18:29.5486054Z DeePMD-kit v0.1.dev1+g7a7a13dfc
+2026-11-09T04:18:47.3669628Z ........................................................................ [ 51%]
+2026-11-09T04:18:48.0343573Z ....................................................................     [100%]
+2026-11-09T04:18:48.0344592Z =============================== warnings summary ===============================
+2026-11-09T04:18:48.0345927Z ../../../../../opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages/setuptools/command/easy_install.py:41
+2026-11-09T04:18:48.0348710Z   /opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages/setuptools/command/easy_install.py:41: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+2026-11-09T04:18:48.0350884Z     import pkg_resources
+2026-11-09T04:18:48.0351371Z 
+2026-11-09T04:18:48.0352275Z ../../../../../opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:712
+2026-11-09T04:18:48.0354415Z   /opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+2026-11-09T04:18:48.0357230Z     warnings.warn(warning_message)
+2026-11-09T04:18:48.0357733Z 
+2026-11-09T04:18:48.0358525Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-09T04:18:48.0359518Z 140 passed, 2 warnings in 0.59s
+2026-11-09T04:18:49.8764682Z Post job cleanup.
+2026-11-09T04:18:50.0135270Z (node:3288) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T04:18:50.0136864Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T04:18:50.0377747Z Post job cleanup.
+2026-11-09T04:18:50.1610455Z [command]/usr/bin/git version
+2026-11-09T04:18:50.1683932Z git version 2.56.0
+2026-11-09T04:18:50.1773068Z Temporarily overriding HOME='/home/runner/work/_temp/88a69532-5a59-4c54-a558-a37e94df6da5' before making global git config changes
+2026-11-09T04:18:50.1784456Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:18:50.1842331Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:18:50.1902685Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:18:50.2001122Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T04:18:50.3007728Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:18:50.3087235Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T04:18:50.3866248Z Cleaning up orphan processes
+2026-11-09T04:18:50.4262015Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
