@@ -1,0 +1,962 @@
+2026-11-09T04:12:53.8996909Z Current runner version: '2.338.2'
+2026-11-09T04:12:53.9004025Z Runner name: 'ephemeral-deepmd-loss-gpu'
+2026-11-09T04:12:53.9004776Z Runner group name: 'Default'
+2026-11-09T04:12:53.9005597Z Machine name: '***'
+2026-11-09T04:12:53.9008474Z ##[group]GITHUB_TOKEN Permissions
+2026-11-09T04:12:53.9010591Z Contents: read
+2026-11-09T04:12:53.9011133Z Metadata: read
+2026-11-09T04:12:53.9011621Z ##[endgroup]
+2026-11-09T04:12:53.9013430Z Secret source: Actions
+2026-11-09T04:12:53.9014213Z Cache mode: write
+2026-11-09T04:12:53.9014831Z Prepare workflow directory
+2026-11-09T04:12:53.9541561Z Prepare all required actions
+2026-11-09T04:12:53.9587609Z Getting action download info
+2026-11-09T04:12:55.4781679Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-11-09T04:12:57.3782799Z Complete job name: cuda-loss
+2026-11-09T04:12:57.5180836Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-09T04:12:57.5182469Z with:
+2026-11-09T04:12:57.5183123Z   persist-credentials: false
+2026-11-09T04:12:57.5184153Z   repository: bingdongni/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:57.5190079Z   token: ***
+2026-11-09T04:12:57.5190717Z   ssh-strict: true
+2026-11-09T04:12:57.5191359Z   ssh-user: git
+2026-11-09T04:12:57.5191978Z   clean: true
+2026-11-09T04:12:57.5192629Z   sparse-checkout-cone-mode: true
+2026-11-09T04:12:57.5193398Z   fetch-depth: 1
+2026-11-09T04:12:57.5194026Z   fetch-tags: false
+2026-11-09T04:12:57.5194677Z   show-progress: true
+2026-11-09T04:12:57.5195327Z   lfs: false
+2026-11-09T04:12:57.5196072Z   submodules: false
+2026-11-09T04:12:57.5196769Z   set-safe-directory: true
+2026-11-09T04:12:57.5197811Z env:
+2026-11-09T04:12:57.5198525Z   MASK_MACHINE: ***
+2026-11-09T04:12:57.5199219Z   MASK_USER: ***
+2026-11-09T04:12:57.5199954Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:12:57.5200722Z ##[endgroup]
+2026-11-09T04:12:57.9912437Z Syncing repository: bingdongni/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:57.9914060Z ##[group]Getting Git version info
+2026-11-09T04:12:57.9914951Z Working directory is 'C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf'
+2026-11-09T04:12:57.9973982Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:12:58.0313138Z git version 2.56.0.windows.4
+2026-11-09T04:12:58.0348974Z ##[endgroup]
+2026-11-09T04:12:58.0361444Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\c8a8da74-30ae-46a2-b849-c904c7b85c9c\.gitconfig'
+2026-11-09T04:12:58.0383079Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\c8a8da74-30ae-46a2-b849-c904c7b85c9c' before making global git config changes
+2026-11-09T04:12:58.0384062Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:12:58.0391704Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:58.0748999Z Deleting the contents of 'C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf'
+2026-11-09T04:12:58.0755237Z ##[group]Initializing the repository
+2026-11-09T04:12:58.0764027Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" init C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:58.2001009Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T04:12:58.2005904Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T04:12:58.2007158Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T04:12:58.2008058Z hint: call:
+2026-11-09T04:12:58.2008584Z hint:
+2026-11-09T04:12:58.2009410Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T04:12:58.2010145Z hint:
+2026-11-09T04:12:58.2010947Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T04:12:58.2012119Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T04:12:58.2012967Z hint:
+2026-11-09T04:12:58.2013545Z hint: 	git branch -m <name>
+2026-11-09T04:12:58.2014129Z hint:
+2026-11-09T04:12:58.2016827Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T04:12:58.2028285Z Initialized empty Git repository in C:/PR/github-gpu-runner-20261106/_work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf/.git/
+2026-11-09T04:12:58.2088742Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" remote add origin https://github.com/bingdongni/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:12:58.2829595Z ##[endgroup]
+2026-11-09T04:12:58.2830133Z ##[group]Disabling automatic garbage collection
+2026-11-09T04:12:58.2838035Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local gc.auto 0
+2026-11-09T04:12:58.3327412Z ##[endgroup]
+2026-11-09T04:12:58.3328065Z ##[group]Setting up auth
+2026-11-09T04:12:58.3342593Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:12:58.3828356Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:12:59.1578585Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:12:59.1942381Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:12:59.8567024Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-09T04:12:59.9068527Z ##[endgroup]
+2026-11-09T04:12:59.9069094Z ##[group]Fetching the repository
+2026-11-09T04:12:59.9078745Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +081ad52b2097e2db229c1ddf433ea809e06f1dd8:refs/remotes/origin/main
+2026-11-09T04:13:02.1454574Z From https://github.com/bingdongni/deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:13:02.1455957Z  * [new ref]         081ad52b2097e2db229c1ddf433ea809e06f1dd8 -> origin/main
+2026-11-09T04:13:02.1506380Z ##[endgroup]
+2026-11-09T04:13:02.1507076Z ##[group]Determining the checkout info
+2026-11-09T04:13:02.1508582Z ##[endgroup]
+2026-11-09T04:13:02.1518378Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" sparse-checkout disable
+2026-11-09T04:13:02.2329872Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-09T04:13:02.2843164Z ##[group]Checking out the ref
+2026-11-09T04:13:02.2851244Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-11-09T04:13:02.4510969Z Switched to a new branch 'main'
+2026-11-09T04:13:02.4559175Z branch 'main' set up to track 'origin/main'.
+2026-11-09T04:13:02.4595573Z ##[endgroup]
+2026-11-09T04:13:02.4992430Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" log -1 --format=%H
+2026-11-09T04:13:02.5332131Z 081ad52b2097e2db229c1ddf433ea809e06f1dd8
+2026-11-09T04:13:02.5375120Z ##[group]Removing auth
+2026-11-09T04:13:02.5383470Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:13:02.5749569Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:13:03.2954794Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:13:03.3339638Z http.https://github.com/.extraheader
+2026-11-09T04:13:03.3383893Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-09T04:13:03.3764294Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:13:04.1799545Z ##[endgroup]
+2026-11-09T04:13:04.2229354Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-09T04:13:04.2229745Z with:
+2026-11-09T04:13:04.2229950Z   repository: bingdongni/deepmd-kit
+2026-11-09T04:13:04.2230232Z   ref: 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:13:04.2230523Z   path: patched
+2026-11-09T04:13:04.2230704Z   persist-credentials: false
+2026-11-09T04:13:04.2232838Z   token: ***
+2026-11-09T04:13:04.2233018Z   ssh-strict: true
+2026-11-09T04:13:04.2233187Z   ssh-user: git
+2026-11-09T04:13:04.2233350Z   clean: true
+2026-11-09T04:13:04.2233531Z   sparse-checkout-cone-mode: true
+2026-11-09T04:13:04.2233743Z   fetch-depth: 1
+2026-11-09T04:13:04.2233911Z   fetch-tags: false
+2026-11-09T04:13:04.2234086Z   show-progress: true
+2026-11-09T04:13:04.2234267Z   lfs: false
+2026-11-09T04:13:04.2234422Z   submodules: false
+2026-11-09T04:13:04.2234601Z   set-safe-directory: true
+2026-11-09T04:13:04.2234786Z env:
+2026-11-09T04:13:04.2234977Z   MASK_MACHINE: ***
+2026-11-09T04:13:04.2235208Z   MASK_USER: ***
+2026-11-09T04:13:04.2235390Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:13:04.2235613Z ##[endgroup]
+2026-11-09T04:13:04.3303377Z Syncing repository: bingdongni/deepmd-kit
+2026-11-09T04:13:04.3311502Z ##[group]Getting Git version info
+2026-11-09T04:13:04.3312329Z Working directory is 'C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\patched'
+2026-11-09T04:13:04.3559865Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:13:04.3898770Z git version 2.56.0.windows.4
+2026-11-09T04:13:04.3939509Z ##[endgroup]
+2026-11-09T04:13:04.3952239Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\e9e5c156-eef2-4ffa-a5f9-39daf8b5a9c2\.gitconfig'
+2026-11-09T04:13:04.3976955Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\e9e5c156-eef2-4ffa-a5f9-39daf8b5a9c2' before making global git config changes
+2026-11-09T04:13:04.3977749Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:13:04.3988822Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\patched
+2026-11-09T04:13:04.4365927Z ##[group]Initializing the repository
+2026-11-09T04:13:04.4374449Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" init C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\patched
+2026-11-09T04:13:04.5074179Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T04:13:04.5074953Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T04:13:04.5075451Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T04:13:04.5075795Z hint: call:
+2026-11-09T04:13:04.5075969Z hint:
+2026-11-09T04:13:04.5076263Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T04:13:04.5076569Z hint:
+2026-11-09T04:13:04.5076892Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T04:13:04.5077769Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T04:13:04.5078558Z hint:
+2026-11-09T04:13:04.5079408Z hint: 	git branch -m <name>
+2026-11-09T04:13:04.5080005Z hint:
+2026-11-09T04:13:04.5080427Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T04:13:04.5088578Z Initialized empty Git repository in C:/PR/github-gpu-runner-20261106/_work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf/patched/.git/
+2026-11-09T04:13:04.5132087Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" remote add origin https://github.com/bingdongni/deepmd-kit
+2026-11-09T04:13:04.5670320Z ##[endgroup]
+2026-11-09T04:13:04.5670873Z ##[group]Disabling automatic garbage collection
+2026-11-09T04:13:04.5681639Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local gc.auto 0
+2026-11-09T04:13:04.6201758Z ##[endgroup]
+2026-11-09T04:13:04.6202291Z ##[group]Setting up auth
+2026-11-09T04:13:04.6219529Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:13:04.6697833Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:13:05.3754618Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:13:05.4165562Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:13:06.1951873Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-09T04:13:06.2449922Z ##[endgroup]
+2026-11-09T04:13:06.2450428Z ##[group]Fetching the repository
+2026-11-09T04:13:06.2460474Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:13:26.8217522Z From https://github.com/bingdongni/deepmd-kit
+2026-11-09T04:13:26.8218293Z  * branch            7a7a13dfcb8e6c5f653852fcc4b26280f0932952 -> FETCH_HEAD
+2026-11-09T04:13:26.8284082Z ##[endgroup]
+2026-11-09T04:13:26.8284766Z ##[group]Determining the checkout info
+2026-11-09T04:13:26.8285442Z ##[endgroup]
+2026-11-09T04:13:26.8297853Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" sparse-checkout disable
+2026-11-09T04:13:26.8945733Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-09T04:13:26.9312480Z ##[group]Checking out the ref
+2026-11-09T04:13:26.9321567Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" checkout --progress --force 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:13:27.9963927Z Updating files:  65% (2256/3426)
+2026-11-09T04:13:28.0068088Z Updating files:  66% (2262/3426)
+2026-11-09T04:13:28.0186013Z Updating files:  67% (2296/3426)
+2026-11-09T04:13:28.0311502Z Updating files:  68% (2330/3426)
+2026-11-09T04:13:28.0440660Z Updating files:  69% (2364/3426)
+2026-11-09T04:13:28.0615368Z Updating files:  70% (2399/3426)
+2026-11-09T04:13:28.0717057Z Updating files:  71% (2433/3426)
+2026-11-09T04:13:28.0825567Z Updating files:  72% (2467/3426)
+2026-11-09T04:13:28.0973653Z Updating files:  73% (2501/3426)
+2026-11-09T04:13:28.1093818Z Updating files:  74% (2536/3426)
+2026-11-09T04:13:28.1899834Z Updating files:  75% (2570/3426)
+2026-11-09T04:13:28.2142355Z Updating files:  76% (2604/3426)
+2026-11-09T04:13:28.2269113Z Updating files:  77% (2639/3426)
+2026-11-09T04:13:28.2380299Z Updating files:  78% (2673/3426)
+2026-11-09T04:13:28.2540955Z Updating files:  79% (2707/3426)
+2026-11-09T04:13:28.2702746Z Updating files:  80% (2741/3426)
+2026-11-09T04:13:28.2881702Z Updating files:  81% (2776/3426)
+2026-11-09T04:13:28.3007861Z Updating files:  82% (2810/3426)
+2026-11-09T04:13:28.3179427Z Updating files:  83% (2844/3426)
+2026-11-09T04:13:28.3337011Z Updating files:  84% (2878/3426)
+2026-11-09T04:13:28.3458569Z Updating files:  85% (2913/3426)
+2026-11-09T04:13:28.3608158Z Updating files:  86% (2947/3426)
+2026-11-09T04:13:28.3804905Z Updating files:  87% (2981/3426)
+2026-11-09T04:13:28.3955283Z Updating files:  88% (3015/3426)
+2026-11-09T04:13:28.4089207Z Updating files:  89% (3050/3426)
+2026-11-09T04:13:28.4220172Z Updating files:  90% (3084/3426)
+2026-11-09T04:13:28.4352269Z Updating files:  91% (3118/3426)
+2026-11-09T04:13:28.4476288Z Updating files:  92% (3152/3426)
+2026-11-09T04:13:28.4623473Z Updating files:  93% (3187/3426)
+2026-11-09T04:13:28.4856465Z Updating files:  94% (3221/3426)
+2026-11-09T04:13:28.4968499Z Updating files:  95% (3255/3426)
+2026-11-09T04:13:28.5086254Z Updating files:  96% (3289/3426)
+2026-11-09T04:13:28.5199202Z Updating files:  97% (3324/3426)
+2026-11-09T04:13:28.5333974Z Updating files:  98% (3358/3426)
+2026-11-09T04:13:28.5465644Z Updating files:  99% (3392/3426)
+2026-11-09T04:13:28.5465951Z Updating files: 100% (3426/3426)
+2026-11-09T04:13:28.5466210Z Updating files: 100% (3426/3426), done.
+2026-11-09T04:13:28.5627835Z Note: switching to '7a7a13dfcb8e6c5f653852fcc4b26280f0932952'.
+2026-11-09T04:13:28.5628102Z 
+2026-11-09T04:13:28.5628344Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-09T04:13:28.5628825Z changes and commit them, and you can discard any commits you make in this
+2026-11-09T04:13:28.5629273Z state without impacting any branches by switching back to a branch.
+2026-11-09T04:13:28.5629510Z 
+2026-11-09T04:13:28.5629726Z If you want to create a new branch to retain commits you create, you may
+2026-11-09T04:13:28.5630140Z do so (now or later) by using -c with the switch command. Example:
+2026-11-09T04:13:28.5630361Z 
+2026-11-09T04:13:28.5630491Z   git switch -c <new-branch-name>
+2026-11-09T04:13:28.5630631Z 
+2026-11-09T04:13:28.5630758Z Or undo this operation with:
+2026-11-09T04:13:28.5630890Z 
+2026-11-09T04:13:28.5630976Z   git switch -
+2026-11-09T04:13:28.5631077Z 
+2026-11-09T04:13:28.5631316Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-09T04:13:28.5631565Z 
+2026-11-09T04:13:28.5631791Z HEAD is now at 7a7a13d fix(loss): retain terms with a zero schedule endpoint
+2026-11-09T04:13:28.5749354Z ##[endgroup]
+2026-11-09T04:13:28.6143497Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" log -1 --format=%H
+2026-11-09T04:13:28.6491394Z 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:13:28.6534630Z ##[group]Removing auth
+2026-11-09T04:13:28.6541926Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:13:28.6902013Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:13:29.4360250Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:13:29.4645616Z http.https://github.com/.extraheader
+2026-11-09T04:13:29.4687242Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-09T04:13:29.5083171Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:13:30.2347891Z ##[endgroup]
+2026-11-09T04:13:30.2937008Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-09T04:13:30.2937551Z with:
+2026-11-09T04:13:30.2937733Z   repository: deepmodeling/deepmd-kit
+2026-11-09T04:13:30.2938112Z   ref: 5485b3abccb221a304af5630545e02fd90d272f0
+2026-11-09T04:13:30.2938418Z   path: baseline
+2026-11-09T04:13:30.2938603Z   persist-credentials: false
+2026-11-09T04:13:30.2940618Z   token: ***
+2026-11-09T04:13:30.2940781Z   ssh-strict: true
+2026-11-09T04:13:30.2940940Z   ssh-user: git
+2026-11-09T04:13:30.2941091Z   clean: true
+2026-11-09T04:13:30.2941270Z   sparse-checkout-cone-mode: true
+2026-11-09T04:13:30.2941476Z   fetch-depth: 1
+2026-11-09T04:13:30.2941640Z   fetch-tags: false
+2026-11-09T04:13:30.2941805Z   show-progress: true
+2026-11-09T04:13:30.2941970Z   lfs: false
+2026-11-09T04:13:30.2942126Z   submodules: false
+2026-11-09T04:13:30.2942301Z   set-safe-directory: true
+2026-11-09T04:13:30.2942477Z env:
+2026-11-09T04:13:30.2942648Z   MASK_MACHINE: ***
+2026-11-09T04:13:30.2942862Z   MASK_USER: ***
+2026-11-09T04:13:30.2943049Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:13:30.2943399Z ##[endgroup]
+2026-11-09T04:13:30.3960009Z Syncing repository: deepmodeling/deepmd-kit
+2026-11-09T04:13:30.3968622Z ##[group]Getting Git version info
+2026-11-09T04:13:30.3969594Z Working directory is 'C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\baseline'
+2026-11-09T04:13:30.4265642Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:13:30.4588976Z git version 2.56.0.windows.4
+2026-11-09T04:13:30.4629169Z ##[endgroup]
+2026-11-09T04:13:30.4638723Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\8fb2ea68-aed8-4cac-b455-0666f564184c\.gitconfig'
+2026-11-09T04:13:30.4659724Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\8fb2ea68-aed8-4cac-b455-0666f564184c' before making global git config changes
+2026-11-09T04:13:30.4660504Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:13:30.4670207Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\baseline
+2026-11-09T04:13:30.5038500Z ##[group]Initializing the repository
+2026-11-09T04:13:30.5046600Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" init C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\baseline
+2026-11-09T04:13:30.5743304Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T04:13:30.5743878Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T04:13:30.5744394Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T04:13:30.5744750Z hint: call:
+2026-11-09T04:13:30.5744929Z hint:
+2026-11-09T04:13:30.5745195Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T04:13:30.5745468Z hint:
+2026-11-09T04:13:30.5745774Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T04:13:30.5746276Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T04:13:30.5746617Z hint:
+2026-11-09T04:13:30.5746812Z hint: 	git branch -m <name>
+2026-11-09T04:13:30.5747020Z hint:
+2026-11-09T04:13:30.5747360Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T04:13:30.5757064Z Initialized empty Git repository in C:/PR/github-gpu-runner-20261106/_work/deepmd-loss-gpu-validation-20261109-dd573a77bf/deepmd-loss-gpu-validation-20261109-dd573a77bf/baseline/.git/
+2026-11-09T04:13:30.5803236Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" remote add origin https://github.com/deepmodeling/deepmd-kit
+2026-11-09T04:13:30.6363586Z ##[endgroup]
+2026-11-09T04:13:30.6364008Z ##[group]Disabling automatic garbage collection
+2026-11-09T04:13:30.6373316Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local gc.auto 0
+2026-11-09T04:13:30.6880182Z ##[endgroup]
+2026-11-09T04:13:30.6880585Z ##[group]Setting up auth
+2026-11-09T04:13:30.6896200Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:13:30.7421138Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:13:31.5061078Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:13:31.5440459Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:13:32.3088199Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-09T04:13:32.3608037Z ##[endgroup]
+2026-11-09T04:13:32.3609273Z ##[group]Fetching the repository
+2026-11-09T04:13:32.3621612Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 5485b3abccb221a304af5630545e02fd90d272f0
+2026-11-09T04:13:44.3267524Z From https://github.com/deepmodeling/deepmd-kit
+2026-11-09T04:13:44.3268016Z  * branch            5485b3abccb221a304af5630545e02fd90d272f0 -> FETCH_HEAD
+2026-11-09T04:13:44.3323235Z ##[endgroup]
+2026-11-09T04:13:44.3324459Z ##[group]Determining the checkout info
+2026-11-09T04:13:44.3324906Z ##[endgroup]
+2026-11-09T04:13:44.3333487Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" sparse-checkout disable
+2026-11-09T04:13:44.4018675Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-09T04:13:44.4415763Z ##[group]Checking out the ref
+2026-11-09T04:13:44.4424859Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" checkout --progress --force 5485b3abccb221a304af5630545e02fd90d272f0
+2026-11-09T04:13:45.5223824Z Updating files:  64% (2209/3424)
+2026-11-09T04:13:45.5343909Z Updating files:  65% (2226/3424)
+2026-11-09T04:13:45.5451739Z Updating files:  66% (2260/3424)
+2026-11-09T04:13:45.5553683Z Updating files:  67% (2295/3424)
+2026-11-09T04:13:45.5672002Z Updating files:  68% (2329/3424)
+2026-11-09T04:13:45.5804893Z Updating files:  69% (2363/3424)
+2026-11-09T04:13:45.5975588Z Updating files:  70% (2397/3424)
+2026-11-09T04:13:45.6081622Z Updating files:  71% (2432/3424)
+2026-11-09T04:13:45.6201199Z Updating files:  72% (2466/3424)
+2026-11-09T04:13:45.6356120Z Updating files:  73% (2500/3424)
+2026-11-09T04:13:45.6473113Z Updating files:  74% (2534/3424)
+2026-11-09T04:13:45.7235951Z Updating files:  75% (2568/3424)
+2026-11-09T04:13:45.7505227Z Updating files:  76% (2603/3424)
+2026-11-09T04:13:45.7647525Z Updating files:  77% (2637/3424)
+2026-11-09T04:13:45.7772323Z Updating files:  78% (2671/3424)
+2026-11-09T04:13:45.7946446Z Updating files:  79% (2705/3424)
+2026-11-09T04:13:45.8111734Z Updating files:  80% (2740/3424)
+2026-11-09T04:13:45.8275907Z Updating files:  81% (2774/3424)
+2026-11-09T04:13:45.8402473Z Updating files:  82% (2808/3424)
+2026-11-09T04:13:45.8624092Z Updating files:  83% (2842/3424)
+2026-11-09T04:13:45.8793230Z Updating files:  84% (2877/3424)
+2026-11-09T04:13:45.8913286Z Updating files:  85% (2911/3424)
+2026-11-09T04:13:45.9069813Z Updating files:  86% (2945/3424)
+2026-11-09T04:13:45.9275338Z Updating files:  87% (2979/3424)
+2026-11-09T04:13:45.9412679Z Updating files:  88% (3014/3424)
+2026-11-09T04:13:45.9559712Z Updating files:  89% (3048/3424)
+2026-11-09T04:13:45.9696043Z Updating files:  90% (3082/3424)
+2026-11-09T04:13:45.9841788Z Updating files:  91% (3116/3424)
+2026-11-09T04:13:45.9959188Z Updating files:  92% (3151/3424)
+2026-11-09T04:13:46.0099763Z Updating files:  93% (3185/3424)
+2026-11-09T04:13:46.0320917Z Updating files:  94% (3219/3424)
+2026-11-09T04:13:46.0433432Z Updating files:  95% (3253/3424)
+2026-11-09T04:13:46.0549703Z Updating files:  96% (3288/3424)
+2026-11-09T04:13:46.0649366Z Updating files:  97% (3322/3424)
+2026-11-09T04:13:46.0784904Z Updating files:  98% (3356/3424)
+2026-11-09T04:13:46.0917405Z Updating files:  99% (3390/3424)
+2026-11-09T04:13:46.0917705Z Updating files: 100% (3424/3424)
+2026-11-09T04:13:46.0917997Z Updating files: 100% (3424/3424), done.
+2026-11-09T04:13:46.1072874Z Note: switching to '5485b3abccb221a304af5630545e02fd90d272f0'.
+2026-11-09T04:13:46.1073157Z 
+2026-11-09T04:13:46.1073400Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-09T04:13:46.1073878Z changes and commit them, and you can discard any commits you make in this
+2026-11-09T04:13:46.1074331Z state without impacting any branches by switching back to a branch.
+2026-11-09T04:13:46.1074555Z 
+2026-11-09T04:13:46.1074775Z If you want to create a new branch to retain commits you create, you may
+2026-11-09T04:13:46.1075218Z do so (now or later) by using -c with the switch command. Example:
+2026-11-09T04:13:46.1075434Z 
+2026-11-09T04:13:46.1075568Z   git switch -c <new-branch-name>
+2026-11-09T04:13:46.1075716Z 
+2026-11-09T04:13:46.1075847Z Or undo this operation with:
+2026-11-09T04:13:46.1075985Z 
+2026-11-09T04:13:46.1076075Z   git switch -
+2026-11-09T04:13:46.1076182Z 
+2026-11-09T04:13:46.1076429Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-09T04:13:46.1076693Z 
+2026-11-09T04:13:46.1076899Z HEAD is now at 5485b3a ci: cache generated C++ model fixtures (#6030)
+2026-11-09T04:13:46.1392776Z ##[endgroup]
+2026-11-09T04:13:46.1799696Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" log -1 --format=%H
+2026-11-09T04:13:46.2115522Z 5485b3abccb221a304af5630545e02fd90d272f0
+2026-11-09T04:13:46.2158522Z ##[group]Removing auth
+2026-11-09T04:13:46.2166999Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:13:46.2528411Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:13:46.9120745Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:13:46.9408068Z http.https://github.com/.extraheader
+2026-11-09T04:13:46.9448140Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-09T04:13:46.9836118Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:13:47.6296181Z ##[endgroup]
+2026-11-09T04:13:47.6598337Z ##[group]Run & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import hashlib,pathlib; pairs=[('patched/deepmd/pt/loss/ener.py', 'ab53defcd3e62119e7ae745011ce6697b9d3fe24718ba0e10b3e2da942c465d8'), ('patched/deepmd/pd/loss/ener.py', 'd16cc56fe047e7af79290e9483c2d18ebca8435d835a2a4b3d35cb57e6cd6e88'), ('patched/deepmd/pt/loss/ener_spin.py', 'c9871b2dd126dac123ef398f2a17cc1b415fa2a9a4ab83f233b72490d93def6d'), ('patched/deepmd/pt/loss/dos.py', 'aadcf0a606d64c9388b4656243e4bceadcba95fda403b54e7de904e1b2650be4'), ('patched/source/tests/pt/test_loss_prefactor_schedule.py', 'a55c6657ffbe320455816d2f743a1fbd2898eaea15628243c82bd4a72678e6ea'), ('patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py', '903412260100bb4d9a13108668b9d277619cc3c473de45e03a64ac87563966e9'), ('baseline/deepmd/pt/loss/ener.py', '8752260710ee00e23aa50116a71a72eb954642ae3a67506bcc1445d7f85a45eb'), ('baseline/deepmd/pd/loss/ener.py', '4eed29551e39b05d6bbda21f377af1dbb5b6fa1032f918ad8a987833604e5b18'), ('baseline/deepmd/pt/loss/ener_spin.py', 'e95c3219e2a4b33be9c5945f59aee8bbe20c6cfb64525de55eb810514aed228f'), ('baseline/deepmd/pt/loss/dos.py', '6b7b61e42bb0d9596bf3bf29d325bbaecb56f557b85cfef1f325ec4777efc274'), ('deepmd_loss_source_runner_20261109.py', 'ed33efa8e3b384df2944e9f9a98763887a1d7f8510919d304648384808f0fe00')]; assert all(hashlib.sha256(pathlib.Path(p).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h for p,h in pairs); print('Source hashes verified')"
+2026-11-09T04:13:47.6606766Z & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import hashlib,pathlib; pairs=[('patched/deepmd/pt/loss/ener.py', 'ab53defcd3e62119e7ae745011ce6697b9d3fe24718ba0e10b3e2da942c465d8'), ('patched/deepmd/pd/loss/ener.py', 'd16cc56fe047e7af79290e9483c2d18ebca8435d835a2a4b3d35cb57e6cd6e88'), ('patched/deepmd/pt/loss/ener_spin.py', 'c9871b2dd126dac123ef398f2a17cc1b415fa2a9a4ab83f233b72490d93def6d'), ('patched/deepmd/pt/loss/dos.py', 'aadcf0a606d64c9388b4656243e4bceadcba95fda403b54e7de904e1b2650be4'), ('patched/source/tests/pt/test_loss_prefactor_schedule.py', 'a55c6657ffbe320455816d2f743a1fbd2898eaea15628243c82bd4a72678e6ea'), ('patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py', '903412260100bb4d9a13108668b9d277619cc3c473de45e03a64ac87563966e9'), ('baseline/deepmd/pt/loss/ener.py', '8752260710ee00e23aa50116a71a72eb954642ae3a67506bcc1445d7f85a45eb'), ('baseline/deepmd/pd/loss/ener.py', '4eed29551e39b05d6bbda21f377af1dbb5b6fa1032f918ad8a987833604e5b18'), ('baseline/deepmd/pt/loss/ener_spin.py', 'e95c3219e2a4b33be9c5945f59aee8bbe20c6cfb64525de55eb810514aed228f'), ('baseline/deepmd/pt/loss/dos.py', '6b7b61e42bb0d9596bf3bf29d325bbaecb56f557b85cfef1f325ec4777efc274'), ('deepmd_loss_source_runner_20261109.py', 'ed33efa8e3b384df2944e9f9a98763887a1d7f8510919d304648384808f0fe00')]; assert all(hashlib.sha256(pathlib.Path(p).read_bytes().replace(b'\r\n',b'\n')).hexdigest()==h for p,h in pairs); print('Source hashes verified')"
+2026-11-09T04:13:47.6611426Z if ($LASTEXITCODE -ne 0) { throw 'Source hash verification failed' }
+2026-11-09T04:13:47.6611874Z Write-Host 'Patched commit: 7a7a13dfcb8e6c5f653852fcc4b26280f0932952'
+2026-11-09T04:13:47.6612322Z Write-Host 'Upstream baseline: 5485b3abccb221a304af5630545e02fd90d272f0'
+2026-11-09T04:13:47.6613126Z & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' -c "import torch; assert torch.cuda.is_available(); print('GPU:',torch.cuda.get_device_name(0),'PyTorch:',torch.__version__,'CUDA:',torch.version.cuda)"
+2026-11-09T04:13:47.6613881Z if ($LASTEXITCODE -ne 0) { throw 'CUDA device check failed' }
+2026-11-09T04:13:47.6652285Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-11-09T04:13:47.6652651Z env:
+2026-11-09T04:13:47.6652893Z   MASK_MACHINE: ***
+2026-11-09T04:13:47.6653096Z   MASK_USER: ***
+2026-11-09T04:13:47.6653281Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:13:47.6653491Z ##[endgroup]
+2026-11-09T04:13:48.5082317Z Source hashes verified
+2026-11-09T04:13:48.5658283Z Patched commit: 7a7a13dfcb8e6c5f653852fcc4b26280f0932952
+2026-11-09T04:13:48.5662962Z Upstream baseline: 5485b3abccb221a304af5630545e02fd90d272f0
+2026-11-09T04:13:54.6383013Z GPU: NVIDIA GeForce RTX 4060 Laptop GPU PyTorch: 2.6.0+cu124 CUDA: 12.4
+2026-11-09T04:13:54.9517410Z ##[group]Run $env:DEEPMD_SOURCE = Join-Path $env:GITHUB_WORKSPACE 'baseline'
+2026-11-09T04:13:54.9517969Z $env:DEEPMD_SOURCE = Join-Path $env:GITHUB_WORKSPACE 'baseline'
+2026-11-09T04:13:54.9518466Z $env:DEEPMD_TEST_CONFIG = Join-Path $env:RUNNER_TEMP ("deepmd-config-" + $env:GITHUB_RUN_ID)
+2026-11-09T04:13:54.9518864Z $env:DEVICE = 'cuda'
+2026-11-09T04:13:54.9520468Z $pt = Join-Path $env:GITHUB_WORKSPACE 'patched/source/tests/pt/test_loss_prefactor_schedule.py'
+2026-11-09T04:13:54.9521258Z $output = & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' deepmd_loss_source_runner_20261109.py --noconftest --tb=no $pt 2>&1 | Out-String
+2026-11-09T04:13:54.9521879Z $code = $LASTEXITCODE
+2026-11-09T04:13:54.9522174Z Write-Host $output
+2026-11-09T04:13:54.9522587Z if ($code -ne 1 -or $output -notmatch '74 failed, 30 passed') { throw 'Unexpected baseline PyTorch result' }
+2026-11-09T04:13:54.9523061Z $env:DEVICE = 'cpu'
+2026-11-09T04:13:54.9523477Z $pd = Join-Path $env:GITHUB_WORKSPACE 'patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py'
+2026-11-09T04:13:54.9524284Z $output = & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' deepmd_loss_source_runner_20261109.py --noconftest --tb=no $pd 2>&1 | Out-String
+2026-11-09T04:13:54.9524851Z $code = $LASTEXITCODE
+2026-11-09T04:13:54.9525065Z Write-Host $output
+2026-11-09T04:13:54.9525455Z if ($code -ne 1 -or $output -notmatch '26 failed, 10 passed') { throw 'Unexpected baseline Paddle result' }
+2026-11-09T04:13:54.9525934Z exit 0
+2026-11-09T04:13:54.9560812Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-11-09T04:13:54.9561251Z env:
+2026-11-09T04:13:54.9561503Z   MASK_MACHINE: ***
+2026-11-09T04:13:54.9561707Z   MASK_USER: ***
+2026-11-09T04:13:54.9561903Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:13:54.9562138Z ##[endgroup]
+2026-11-09T04:14:04.6740043Z FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FF..FFFFFFFFFFFF [ 69%]
+2026-11-09T04:14:04.6740827Z FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                                         [100%]
+2026-11-09T04:14:04.6741420Z ============================== warnings summary ===============================
+2026-11-09T04:14:04.6741942Z ..\..\..\..\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373
+2026-11-09T04:14:04.6742682Z   C:\PR\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373: PytestConfigWarning: Unknown config option: timeout
+2026-11-09T04:14:04.6743184Z   
+2026-11-09T04:14:04.6743773Z     self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+2026-11-09T04:14:04.6744001Z 
+2026-11-09T04:14:04.6749489Z source/tests/pt/test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-0.0-1.0-EnergyStdLoss]
+2026-11-09T04:14:04.6750681Z   D:\Python\Lib\site-packages\torch\utils\_device.py:104: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+2026-11-09T04:14:04.6751617Z     return func(*args, **kwargs)
+2026-11-09T04:14:04.6751789Z 
+2026-11-09T04:14:04.6752087Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-09T04:14:04.6752569Z =========================== short test summary info ===========================
+2026-11-09T04:14:04.6753422Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[e-labels0-0.0-1.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:04.6754053Z   Extra items in the right set:
+2026-11-09T04:14:04.6754278Z   'energy'
+2026-11-09T04:14:04.6754458Z   Full diff:
+2026-11-09T04:14:04.6754637Z   - {'energy'}
+2026-11-09T04:14:04.6754811Z   + set()
+2026-11-09T04:14:04.6756873Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[e-labels0-1.0-0.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:04.6757508Z   Extra items in the right set:
+2026-11-09T04:14:04.6757729Z   'energy'
+2026-11-09T04:14:04.6757899Z   Full diff:
+2026-11-09T04:14:04.6758439Z   - {'energy'}
+2026-11-09T04:14:04.6758657Z   + set()
+2026-11-09T04:14:04.6759418Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[f-labels1-0.0-1.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:04.6760049Z   Extra items in the right set:
+2026-11-09T04:14:04.6760266Z   'force'
+2026-11-09T04:14:04.6760437Z   Full diff:
+2026-11-09T04:14:04.6760625Z   - {'force'}
+2026-11-09T04:14:04.6760799Z   + set()
+2026-11-09T04:14:04.6761450Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[f-labels1-1.0-0.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:04.6762166Z   Extra items in the right set:
+2026-11-09T04:14:04.6762410Z   'force'
+2026-11-09T04:14:04.6762585Z   Full diff:
+2026-11-09T04:14:04.6762836Z   - {'force'}
+2026-11-09T04:14:04.6763067Z   + set()
+2026-11-09T04:14:04.6763729Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[v-labels2-0.0-1.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:04.6764336Z   Extra items in the right set:
+2026-11-09T04:14:04.6764580Z   'virial'
+2026-11-09T04:14:04.6764779Z   Full diff:
+2026-11-09T04:14:04.6764996Z   - {'virial'}
+2026-11-09T04:14:04.6765198Z   + set()
+2026-11-09T04:14:04.6765858Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[v-labels2-1.0-0.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:04.6766467Z   Extra items in the right set:
+2026-11-09T04:14:04.6766689Z   'virial'
+2026-11-09T04:14:04.6766855Z   Full diff:
+2026-11-09T04:14:04.6767027Z   - {'virial'}
+2026-11-09T04:14:04.6767199Z   + set()
+2026-11-09T04:14:04.6768009Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[ae-labels3-0.0-1.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:04.6768656Z   Extra items in the right set:
+2026-11-09T04:14:04.6768873Z   'atom_ener'
+2026-11-09T04:14:04.6769046Z   Full diff:
+2026-11-09T04:14:04.6769228Z   - {'atom_ener'}
+2026-11-09T04:14:04.6769411Z   + set()
+2026-11-09T04:14:04.6770065Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[ae-labels3-1.0-0.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:04.6770674Z   Extra items in the right set:
+2026-11-09T04:14:04.6771166Z   'atom_ener'
+2026-11-09T04:14:04.6771338Z   Full diff:
+2026-11-09T04:14:04.6771516Z   - {'atom_ener'}
+2026-11-09T04:14:04.6771692Z   + set()
+2026-11-09T04:14:04.6772407Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[pf-labels4-0.0-1.0] - AssertionError: assert set() == {'atom_pref', 'force'}
+2026-11-09T04:14:04.6774113Z   Extra items in the right set:
+2026-11-09T04:14:04.6774351Z   'atom_pref'
+2026-11-09T04:14:04.6774521Z   'force'
+2026-11-09T04:14:04.6774685Z   Full diff:
+2026-11-09T04:14:04.6774957Z   - {'atom_pref', 'force'}
+2026-11-09T04:14:04.6775178Z   + set()
+2026-11-09T04:14:04.6775884Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[pf-labels4-1.0-0.0] - AssertionError: assert set() == {'atom_pref', 'force'}
+2026-11-09T04:14:04.6776534Z   Extra items in the right set:
+2026-11-09T04:14:04.6776748Z   'atom_pref'
+2026-11-09T04:14:04.6776933Z   'force'
+2026-11-09T04:14:04.6777095Z   Full diff:
+2026-11-09T04:14:04.6777284Z   - {'atom_pref', 'force'}
+2026-11-09T04:14:04.6777480Z   + set()
+2026-11-09T04:14:04.6778613Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[gf-labels5-0.0-1.0] - AssertionError: assert set() == {'drdq', 'force'}
+2026-11-09T04:14:04.6779238Z   Extra items in the right set:
+2026-11-09T04:14:04.6779446Z   'force'
+2026-11-09T04:14:04.6779606Z   'drdq'
+2026-11-09T04:14:04.6779775Z   Full diff:
+2026-11-09T04:14:04.6779968Z   - {'force', 'drdq'}
+2026-11-09T04:14:04.6780172Z   + set()
+2026-11-09T04:14:04.6780804Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_label_requirements[gf-labels5-1.0-0.0] - AssertionError: assert set() == {'drdq', 'force'}
+2026-11-09T04:14:04.6781407Z   Extra items in the right set:
+2026-11-09T04:14:04.6781620Z   'force'
+2026-11-09T04:14:04.6781774Z   'drdq'
+2026-11-09T04:14:04.6781939Z   Full diff:
+2026-11-09T04:14:04.6782128Z   - {'force', 'drdq'}
+2026-11-09T04:14:04.6782311Z   + set()
+2026-11-09T04:14:04.6782931Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[e-energy-0.0-1.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:04.6783517Z   Extra items in the right set:
+2026-11-09T04:14:04.6783729Z   'energy'
+2026-11-09T04:14:04.6783899Z   Full diff:
+2026-11-09T04:14:04.6784072Z   - {'energy'}
+2026-11-09T04:14:04.6784244Z   + set()
+2026-11-09T04:14:04.6784845Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[e-energy-1.0-0.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:04.6785427Z   Extra items in the right set:
+2026-11-09T04:14:04.6785634Z   'energy'
+2026-11-09T04:14:04.6785803Z   Full diff:
+2026-11-09T04:14:04.6785975Z   - {'energy'}
+2026-11-09T04:14:04.6786153Z   + set()
+2026-11-09T04:14:04.6786771Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[fr-force-0.0-1.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:04.6787352Z   Extra items in the right set:
+2026-11-09T04:14:04.6787561Z   'force'
+2026-11-09T04:14:04.6787725Z   Full diff:
+2026-11-09T04:14:04.6787901Z   - {'force'}
+2026-11-09T04:14:04.6788069Z   + set()
+2026-11-09T04:14:04.6788676Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[fr-force-1.0-0.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:04.6789248Z   Extra items in the right set:
+2026-11-09T04:14:04.6789457Z   'force'
+2026-11-09T04:14:04.6789613Z   Full diff:
+2026-11-09T04:14:04.6789775Z   - {'force'}
+2026-11-09T04:14:04.6789934Z   + set()
+2026-11-09T04:14:04.6790582Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[fm-force_mag-0.0-1.0] - AssertionError: assert set() == {'force_mag'}
+2026-11-09T04:14:04.6796245Z   Extra items in the right set:
+2026-11-09T04:14:04.6796781Z   'force_mag'
+2026-11-09T04:14:04.6796960Z   Full diff:
+2026-11-09T04:14:04.6797144Z   - {'force_mag'}
+2026-11-09T04:14:04.6797336Z   + set()
+2026-11-09T04:14:04.6798039Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[fm-force_mag-1.0-0.0] - AssertionError: assert set() == {'force_mag'}
+2026-11-09T04:14:04.6798650Z   Extra items in the right set:
+2026-11-09T04:14:04.6798863Z   'force_mag'
+2026-11-09T04:14:04.6799043Z   Full diff:
+2026-11-09T04:14:04.6799219Z   - {'force_mag'}
+2026-11-09T04:14:04.6799398Z   + set()
+2026-11-09T04:14:04.6800038Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[v-virial-0.0-1.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:04.6800635Z   Extra items in the right set:
+2026-11-09T04:14:04.6800855Z   'virial'
+2026-11-09T04:14:04.6801023Z   Full diff:
+2026-11-09T04:14:04.6801192Z   - {'virial'}
+2026-11-09T04:14:04.6801483Z   + set()
+2026-11-09T04:14:04.6802187Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[v-virial-1.0-0.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:04.6803520Z   Extra items in the right set:
+2026-11-09T04:14:04.6803737Z   'virial'
+2026-11-09T04:14:04.6804052Z   Full diff:
+2026-11-09T04:14:04.6804234Z   - {'virial'}
+2026-11-09T04:14:04.6804415Z   + set()
+2026-11-09T04:14:04.6805082Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[ae-atom_ener-0.0-1.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:04.6805695Z   Extra items in the right set:
+2026-11-09T04:14:04.6805906Z   'atom_ener'
+2026-11-09T04:14:04.6806084Z   Full diff:
+2026-11-09T04:14:04.6806262Z   - {'atom_ener'}
+2026-11-09T04:14:04.6806443Z   + set()
+2026-11-09T04:14:04.6807265Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_spin_schedule_label_requirements[ae-atom_ener-1.0-0.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:04.6807897Z   Extra items in the right set:
+2026-11-09T04:14:04.6808113Z   'atom_ener'
+2026-11-09T04:14:04.6808278Z   Full diff:
+2026-11-09T04:14:04.6808452Z   - {'atom_ener'}
+2026-11-09T04:14:04.6808624Z   + set()
+2026-11-09T04:14:04.6809276Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[dos-0.0-1.0] - AssertionError: assert ('dos' in {'atom_dos'}) == True
+2026-11-09T04:14:04.6809876Z  +  where True = bool((0.0 or 1.0))
+2026-11-09T04:14:04.6810566Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[dos-1.0-0.0] - AssertionError: assert ('dos' in {'atom_dos'}) == True
+2026-11-09T04:14:04.6811168Z  +  where True = bool((1.0))
+2026-11-09T04:14:04.6811855Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[cdf-0.0-1.0] - AssertionError: assert ('dos' in {'atom_dos'}) == True
+2026-11-09T04:14:04.6812956Z  +  where True = bool((0.0 or 1.0))
+2026-11-09T04:14:04.6813637Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[cdf-1.0-0.0] - AssertionError: assert ('dos' in {'atom_dos'}) == True
+2026-11-09T04:14:04.6814232Z  +  where True = bool((1.0))
+2026-11-09T04:14:04.6814915Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[ados-0.0-1.0] - AssertionError: assert ('atom_dos' in {'dos'}) == True
+2026-11-09T04:14:04.6815507Z  +  where True = bool((0.0 or 1.0))
+2026-11-09T04:14:04.6816185Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[ados-1.0-0.0] - AssertionError: assert ('atom_dos' in {'dos'}) == True
+2026-11-09T04:14:04.6816767Z  +  where True = bool((1.0))
+2026-11-09T04:14:04.6817593Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[acdf-0.0-1.0] - AssertionError: assert ('atom_dos' in {'dos'}) == True
+2026-11-09T04:14:04.6818310Z  +  where True = bool((0.0 or 1.0))
+2026-11-09T04:14:04.6818980Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_label_requirements[acdf-1.0-0.0] - AssertionError: assert ('atom_dos' in {'dos'}) == True
+2026-11-09T04:14:04.6819572Z  +  where True = bool((1.0))
+2026-11-09T04:14:04.6820459Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-0.0-1.0-EnergyStdLoss] - RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+2026-11-09T04:14:04.6821890Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-0.0-1.0-EnergySpinLoss] - RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+2026-11-09T04:14:04.6824546Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-1.0-0.0-EnergyStdLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6825091Z 
+2026-11-09T04:14:04.6825212Z Expected 2.0 but got 0.0.
+2026-11-09T04:14:04.6825479Z Absolute difference: 2.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6825783Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6826666Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-1.0-0.0-EnergySpinLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6827199Z 
+2026-11-09T04:14:04.6827308Z Expected 2.0 but got 0.0.
+2026-11-09T04:14:04.6827562Z Absolute difference: 2.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6827959Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6828776Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-0.0-1.0-EnergyStdLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6829323Z 
+2026-11-09T04:14:04.6829421Z Expected 1.0 but got 0.0.
+2026-11-09T04:14:04.6829671Z Absolute difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6829967Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6830731Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-0.0-1.0-EnergySpinLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6831258Z 
+2026-11-09T04:14:04.6831356Z Expected 1.0 but got 0.0.
+2026-11-09T04:14:04.6831599Z Absolute difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6831890Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6832629Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-1.0-0.0-EnergyStdLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6833263Z 
+2026-11-09T04:14:04.6833406Z Expected 1.0 but got 0.0.
+2026-11-09T04:14:04.6833662Z Absolute difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6833959Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6834723Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-1.0-0.0-EnergySpinLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6835261Z 
+2026-11-09T04:14:04.6835357Z Expected 1.0 but got 0.0.
+2026-11-09T04:14:04.6835598Z Absolute difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6835888Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6836630Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-0.0-1.0-EnergyStdLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6837154Z 
+2026-11-09T04:14:04.6837249Z Expected 2.0 but got 0.0.
+2026-11-09T04:14:04.6837491Z Absolute difference: 2.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6837816Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6838806Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-0.0-1.0-EnergySpinLoss] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6839335Z 
+2026-11-09T04:14:04.6839439Z Expected 2.0 but got 0.0.
+2026-11-09T04:14:04.6839683Z Absolute difference: 2.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6839963Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6840877Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-1.0-0.0-EnergyStdLoss] - RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+2026-11-09T04:14:04.6842280Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-1.0-0.0-EnergySpinLoss] - RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+2026-11-09T04:14:04.6843464Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[f-0.0-1.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6844083Z 
+2026-11-09T04:14:04.6844196Z Expected 0.75 but got 0.0.
+2026-11-09T04:14:04.6844459Z Absolute difference: 0.75 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6845341Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6846092Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[f-1.0-0.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6846589Z 
+2026-11-09T04:14:04.6846700Z Expected 0.25 but got 0.0.
+2026-11-09T04:14:04.6846961Z Absolute difference: 0.25 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6847265Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6847977Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[pf-0.0-1.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6848485Z 
+2026-11-09T04:14:04.6848596Z Expected 0.75 but got 0.0.
+2026-11-09T04:14:04.6848851Z Absolute difference: 0.75 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6849267Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6850034Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[pf-1.0-0.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6850524Z 
+2026-11-09T04:14:04.6850625Z Expected 0.25 but got 0.0.
+2026-11-09T04:14:04.6850874Z Absolute difference: 0.25 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6851169Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6851858Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[gf-0.0-1.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6852344Z 
+2026-11-09T04:14:04.6852447Z Expected 0.75 but got 0.0.
+2026-11-09T04:14:04.6852700Z Absolute difference: 0.75 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6852991Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6853679Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_force_schedule_contributes_to_loss_and_gradient[gf-1.0-0.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6854175Z 
+2026-11-09T04:14:04.6854276Z Expected 0.25 but got 0.0.
+2026-11-09T04:14:04.6854627Z Absolute difference: 0.25 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6854924Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6855657Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_magnetic_force_schedule_contributes_to_loss_and_gradient[0.0-1.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6856164Z 
+2026-11-09T04:14:04.6856271Z Expected 3.5 but got 0.0.
+2026-11-09T04:14:04.6856523Z Absolute difference: 3.5 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6856811Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6857649Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_magnetic_force_schedule_contributes_to_loss_and_gradient[1.0-0.0] - AssertionError: Scalars are not close!
+2026-11-09T04:14:04.6858165Z 
+2026-11-09T04:14:04.6858286Z Expected 1.1666666666666667 but got 0.0.
+2026-11-09T04:14:04.6863553Z Absolute difference: 1.1666666666666667 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6863914Z Relative difference: 1.0 (up to 1e-07 allowed)
+2026-11-09T04:14:04.6864819Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-1.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6866076Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-1.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6867325Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-0.5-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6868794Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-0.5-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6870023Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-0.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6871249Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[dos-0.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6872813Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-1.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6874316Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-1.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6875544Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-0.5-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6876776Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-0.5-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6878034Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-0.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6879249Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[cdf-0.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6880489Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-1.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6881722Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-1.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6882924Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-0.5-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6884925Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-0.5-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6886142Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-0.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6887361Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[ados-0.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6888578Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-1.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6889894Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-1.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6891361Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-0.5-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6892582Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-0.5-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6893789Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-0.0-0.0-1.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6894998Z FAILED patched\source\tests\pt\test_loss_prefactor_schedule.py::test_dos_schedule_contributes_to_loss_and_gradient[acdf-0.0-1.0-0.0] - AssertionError: Can not assian zero weight both to `pref` and `pref_atomic`
+2026-11-09T04:14:04.6895711Z 74 failed, 30 passed, 2 warnings in 3.88s
+2026-11-09T04:14:04.6895877Z 
+2026-11-09T04:14:13.1599973Z FF..FF..FF..FF..FF.FFF.FFFFFFFFFFFFF                                     [100%]
+2026-11-09T04:14:13.1600532Z ============================== warnings summary ===============================
+2026-11-09T04:14:13.1601033Z ..\..\..\..\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373
+2026-11-09T04:14:13.1601802Z   C:\PR\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373: PytestConfigWarning: Unknown config option: timeout
+2026-11-09T04:14:13.1602378Z   
+2026-11-09T04:14:13.1602674Z     self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+2026-11-09T04:14:13.1602917Z 
+2026-11-09T04:14:13.1603131Z D:\Python\Lib\site-packages\setuptools\command\easy_install.py:41
+2026-11-09T04:14:13.1604046Z   D:\Python\Lib\site-packages\setuptools\command\easy_install.py:41: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+2026-11-09T04:14:13.1604754Z     import pkg_resources
+2026-11-09T04:14:13.1604892Z 
+2026-11-09T04:14:13.1605170Z ..\..\..\..\deepmd-loss-deps-20261109\paddle\utils\cpp_extension\extension_utils.py:712
+2026-11-09T04:14:13.1606423Z   C:\PR\deepmd-loss-deps-20261109\paddle\utils\cpp_extension\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+2026-11-09T04:14:13.1607468Z     warnings.warn(warning_message)
+2026-11-09T04:14:13.1607625Z 
+2026-11-09T04:14:13.1607864Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-09T04:14:13.1608307Z =========================== short test summary info ===========================
+2026-11-09T04:14:13.1609251Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[e-labels0-0.0-1.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:13.1610207Z   Extra items in the right set:
+2026-11-09T04:14:13.1610432Z   'energy'
+2026-11-09T04:14:13.1610609Z   Full diff:
+2026-11-09T04:14:13.1610805Z   - {'energy'}
+2026-11-09T04:14:13.1610984Z   + set()
+2026-11-09T04:14:13.1611669Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[e-labels0-1.0-0.0] - AssertionError: assert set() == {'energy'}
+2026-11-09T04:14:13.1612293Z   Extra items in the right set:
+2026-11-09T04:14:13.1612513Z   'energy'
+2026-11-09T04:14:13.1612684Z   Full diff:
+2026-11-09T04:14:13.1612859Z   - {'energy'}
+2026-11-09T04:14:13.1613035Z   + set()
+2026-11-09T04:14:13.1613698Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[f-labels1-0.0-1.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:13.1614331Z   Extra items in the right set:
+2026-11-09T04:14:13.1614545Z   'force'
+2026-11-09T04:14:13.1614718Z   Full diff:
+2026-11-09T04:14:13.1614891Z   - {'force'}
+2026-11-09T04:14:13.1615064Z   + set()
+2026-11-09T04:14:13.1616470Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[f-labels1-1.0-0.0] - AssertionError: assert set() == {'force'}
+2026-11-09T04:14:13.1617147Z   Extra items in the right set:
+2026-11-09T04:14:13.1617362Z   'force'
+2026-11-09T04:14:13.1617534Z   Full diff:
+2026-11-09T04:14:13.1617716Z   - {'force'}
+2026-11-09T04:14:13.1617889Z   + set()
+2026-11-09T04:14:13.1618548Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[v-labels2-0.0-1.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:13.1619198Z   Extra items in the right set:
+2026-11-09T04:14:13.1619432Z   'virial'
+2026-11-09T04:14:13.1619592Z   Full diff:
+2026-11-09T04:14:13.1619771Z   - {'virial'}
+2026-11-09T04:14:13.1619940Z   + set()
+2026-11-09T04:14:13.1620591Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[v-labels2-1.0-0.0] - AssertionError: assert set() == {'virial'}
+2026-11-09T04:14:13.1621219Z   Extra items in the right set:
+2026-11-09T04:14:13.1621422Z   'virial'
+2026-11-09T04:14:13.1621584Z   Full diff:
+2026-11-09T04:14:13.1621752Z   - {'virial'}
+2026-11-09T04:14:13.1621919Z   + set()
+2026-11-09T04:14:13.1622596Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[ae-labels3-0.0-1.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:13.1623226Z   Extra items in the right set:
+2026-11-09T04:14:13.1623441Z   'atom_ener'
+2026-11-09T04:14:13.1623611Z   Full diff:
+2026-11-09T04:14:13.1623799Z   - {'atom_ener'}
+2026-11-09T04:14:13.1623977Z   + set()
+2026-11-09T04:14:13.1624641Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[ae-labels3-1.0-0.0] - AssertionError: assert set() == {'atom_ener'}
+2026-11-09T04:14:13.1625270Z   Extra items in the right set:
+2026-11-09T04:14:13.1625488Z   'atom_ener'
+2026-11-09T04:14:13.1625660Z   Full diff:
+2026-11-09T04:14:13.1625839Z   - {'atom_ener'}
+2026-11-09T04:14:13.1626014Z   + set()
+2026-11-09T04:14:13.1626713Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[pf-labels4-0.0-1.0] - AssertionError: assert set() == {'atom_pref', 'force'}
+2026-11-09T04:14:13.1627387Z   Extra items in the right set:
+2026-11-09T04:14:13.1627596Z   'force'
+2026-11-09T04:14:13.1627764Z   'atom_pref'
+2026-11-09T04:14:13.1627939Z   Full diff:
+2026-11-09T04:14:13.1628141Z   - {'force', 'atom_pref'}
+2026-11-09T04:14:13.1628345Z   + set()
+2026-11-09T04:14:13.1629050Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[pf-labels4-1.0-0.0] - AssertionError: assert set() == {'atom_pref', 'force'}
+2026-11-09T04:14:13.1629842Z   Extra items in the right set:
+2026-11-09T04:14:13.1630053Z   'force'
+2026-11-09T04:14:13.1630224Z   'atom_pref'
+2026-11-09T04:14:13.1630401Z   Full diff:
+2026-11-09T04:14:13.1630593Z   - {'force', 'atom_pref'}
+2026-11-09T04:14:13.1630799Z   + set()
+2026-11-09T04:14:13.1631544Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[pf-labels4-1.0-1.0] - AssertionError: assert {'atom_pref'} == {'atom_pref', 'force'}
+2026-11-09T04:14:13.1632229Z   Extra items in the right set:
+2026-11-09T04:14:13.1632437Z   'force'
+2026-11-09T04:14:13.1632595Z   Full diff:
+2026-11-09T04:14:13.1632782Z   - {'force', 'atom_pref'}
+2026-11-09T04:14:13.1632987Z   + {'atom_pref'}
+2026-11-09T04:14:13.1633690Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[gf-labels5-0.0-1.0] - AssertionError: assert set() == {'drdq', 'force'}
+2026-11-09T04:14:13.1634337Z   Extra items in the right set:
+2026-11-09T04:14:13.1634546Z   'force'
+2026-11-09T04:14:13.1634708Z   'drdq'
+2026-11-09T04:14:13.1634873Z   Full diff:
+2026-11-09T04:14:13.1635052Z   - {'force', 'drdq'}
+2026-11-09T04:14:13.1635238Z   + set()
+2026-11-09T04:14:13.1636262Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[gf-labels5-1.0-0.0] - AssertionError: assert set() == {'drdq', 'force'}
+2026-11-09T04:14:13.1636944Z   Extra items in the right set:
+2026-11-09T04:14:13.1637154Z   'force'
+2026-11-09T04:14:13.1637318Z   'drdq'
+2026-11-09T04:14:13.1637480Z   Full diff:
+2026-11-09T04:14:13.1637670Z   - {'force', 'drdq'}
+2026-11-09T04:14:13.1637860Z   + set()
+2026-11-09T04:14:13.1638543Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_label_requirements[gf-labels5-1.0-1.0] - AssertionError: assert {'drdq'} == {'drdq', 'force'}
+2026-11-09T04:14:13.1639199Z   Extra items in the right set:
+2026-11-09T04:14:13.1639582Z   'force'
+2026-11-09T04:14:13.1640417Z   Full diff:
+2026-11-09T04:14:13.1640667Z   - {'force', 'drdq'}
+2026-11-09T04:14:13.1640881Z   + {'drdq'}
+2026-11-09T04:14:13.1642108Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-0.0-1.0] - ValueError: (InvalidArgument) The 0-th input does not appear in the backward graph. Please check the input tensor or set allow_unused=True to get None result.
+2026-11-09T04:14:13.1643642Z   [Hint: Expected allow_unused == true, but received allow_unused:0 != true:1.] (at ..\paddle/fluid/eager/general_grad.h:480)
+2026-11-09T04:14:13.1644646Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-1.0-0.0] - AssertionError: 
+2026-11-09T04:14:13.1645274Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1645448Z 
+2026-11-09T04:14:13.1645581Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1645869Z Max absolute difference among violations: 2.
+2026-11-09T04:14:13.1646181Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1646446Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1646655Z  DESIRED: array(2.)
+2026-11-09T04:14:13.1647305Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-0.0-1.0] - AssertionError: 
+2026-11-09T04:14:13.1647918Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1648090Z 
+2026-11-09T04:14:13.1648205Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1648495Z Max absolute difference among violations: 1.
+2026-11-09T04:14:13.1648796Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1649061Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1649264Z  DESIRED: array(1.)
+2026-11-09T04:14:13.1649903Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[0.5-1.0-0.0] - AssertionError: 
+2026-11-09T04:14:13.1650765Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1650924Z 
+2026-11-09T04:14:13.1651045Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1651816Z Max absolute difference among violations: 1.
+2026-11-09T04:14:13.1652372Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1654498Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1654846Z  DESIRED: array(1.)
+2026-11-09T04:14:13.1655587Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-0.0-1.0] - AssertionError: 
+2026-11-09T04:14:13.1656391Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1656566Z 
+2026-11-09T04:14:13.1656690Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1658641Z Max absolute difference among violations: 2.
+2026-11-09T04:14:13.1658961Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1659219Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1659431Z  DESIRED: array(2.)
+2026-11-09T04:14:13.1660790Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_energy_schedule_contributes_to_loss_and_gradient[0.0-1.0-0.0] - ValueError: (InvalidArgument) The 0-th input does not appear in the backward graph. Please check the input tensor or set allow_unused=True to get None result.
+2026-11-09T04:14:13.1662022Z   [Hint: Expected allow_unused == true, but received allow_unused:0 != true:1.] (at ..\paddle/fluid/eager/general_grad.h:480)
+2026-11-09T04:14:13.1662916Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[f-0.0-1.0] - AssertionError: 
+2026-11-09T04:14:13.1663514Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1663673Z 
+2026-11-09T04:14:13.1663794Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1664078Z Max absolute difference among violations: 0.75
+2026-11-09T04:14:13.1664382Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1664649Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1664855Z  DESIRED: array(0.75)
+2026-11-09T04:14:13.1665484Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[f-1.0-0.0] - AssertionError: 
+2026-11-09T04:14:13.1666067Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1666232Z 
+2026-11-09T04:14:13.1666350Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1666629Z Max absolute difference among violations: 0.25
+2026-11-09T04:14:13.1666935Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1667188Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1667397Z  DESIRED: array(0.25)
+2026-11-09T04:14:13.1668029Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[pf-0.0-1.0] - AssertionError: 
+2026-11-09T04:14:13.1668626Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1669440Z 
+2026-11-09T04:14:13.1669646Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1669965Z Max absolute difference among violations: 0.75
+2026-11-09T04:14:13.1670287Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1670556Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1670761Z  DESIRED: array(0.75)
+2026-11-09T04:14:13.1671472Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[pf-1.0-0.0] - AssertionError: 
+2026-11-09T04:14:13.1672160Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1672323Z 
+2026-11-09T04:14:13.1672447Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1672733Z Max absolute difference among violations: 0.25
+2026-11-09T04:14:13.1673032Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1673292Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1673489Z  DESIRED: array(0.25)
+2026-11-09T04:14:13.1674133Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[gf-0.0-1.0] - AssertionError: 
+2026-11-09T04:14:13.1674941Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1675102Z 
+2026-11-09T04:14:13.1675220Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1675495Z Max absolute difference among violations: 0.75
+2026-11-09T04:14:13.1675800Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1676339Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1676559Z  DESIRED: array(0.75)
+2026-11-09T04:14:13.1677848Z FAILED patched\source\tests\pd\test_loss_prefactor_schedule_paddle.py::test_force_schedule_contributes_to_loss_and_gradient[gf-1.0-0.0] - AssertionError: 
+2026-11-09T04:14:13.1678463Z Not equal to tolerance rtol=1e-07, atol=0
+2026-11-09T04:14:13.1678629Z 
+2026-11-09T04:14:13.1678743Z Mismatched elements: 1 / 1 (100%)
+2026-11-09T04:14:13.1679032Z Max absolute difference among violations: 0.25
+2026-11-09T04:14:13.1679341Z Max relative difference among violations: 1.
+2026-11-09T04:14:13.1679607Z  ACTUAL: array(0.)
+2026-11-09T04:14:13.1679805Z  DESIRED: array(0.25)
+2026-11-09T04:14:13.1680042Z 26 failed, 10 passed, 3 warnings in 3.07s
+2026-11-09T04:14:13.1680222Z 
+2026-11-09T04:14:13.1959084Z ##[group]Run $env:DEEPMD_SOURCE = Join-Path $env:GITHUB_WORKSPACE 'patched'
+2026-11-09T04:14:13.1959608Z $env:DEEPMD_SOURCE = Join-Path $env:GITHUB_WORKSPACE 'patched'
+2026-11-09T04:14:13.1960086Z $env:DEEPMD_TEST_CONFIG = Join-Path $env:RUNNER_TEMP ("deepmd-config-" + $env:GITHUB_RUN_ID)
+2026-11-09T04:14:13.1960492Z $env:DEVICE = 'cuda'
+2026-11-09T04:14:13.1960884Z $pt = Join-Path $env:GITHUB_WORKSPACE 'patched/source/tests/pt/test_loss_prefactor_schedule.py'
+2026-11-09T04:14:13.1961562Z & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' deepmd_loss_source_runner_20261109.py --noconftest --tb=short $pt
+2026-11-09T04:14:13.1962154Z if ($LASTEXITCODE -ne 0) { throw 'Patched PyTorch CUDA tests failed' }
+2026-11-09T04:14:13.1962548Z $env:DEVICE = 'cpu'
+2026-11-09T04:14:13.1962952Z $pd = Join-Path $env:GITHUB_WORKSPACE 'patched/source/tests/pd/test_loss_prefactor_schedule_paddle.py'
+2026-11-09T04:14:13.1963672Z & 'C:\PR\kvpress-gpu-venv-20261107\Scripts\python.exe' deepmd_loss_source_runner_20261109.py --noconftest --tb=short $pd
+2026-11-09T04:14:13.1964241Z if ($LASTEXITCODE -ne 0) { throw 'Patched Paddle CPU tests failed' }
+2026-11-09T04:14:13.1996124Z shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2026-11-09T04:14:13.1996499Z env:
+2026-11-09T04:14:13.1996742Z   MASK_MACHINE: ***
+2026-11-09T04:14:13.1996938Z   MASK_USER: ***
+2026-11-09T04:14:13.1997597Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-11-09T04:14:13.1997956Z ##[endgroup]
+2026-11-09T04:14:22.9856149Z ........................................................................ [ 69%]
+2026-11-09T04:14:23.3362444Z ................................                                         [100%]
+2026-11-09T04:14:23.3367001Z ============================== warnings summary ===============================
+2026-11-09T04:14:23.3367554Z ..\..\..\..\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373
+2026-11-09T04:14:23.3368280Z   C:\PR\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373: PytestConfigWarning: Unknown config option: timeout
+2026-11-09T04:14:23.3368774Z   
+2026-11-09T04:14:23.3369061Z     self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+2026-11-09T04:14:23.3369280Z 
+2026-11-09T04:14:23.3369840Z source/tests/pt/test_loss_prefactor_schedule.py::test_energy_schedule_contributes_to_loss_and_gradient[1.0-0.0-1.0-EnergyStdLoss]
+2026-11-09T04:14:23.3371291Z   D:\Python\Lib\site-packages\torch\utils\_device.py:104: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+2026-11-09T04:14:23.3372101Z     return func(*args, **kwargs)
+2026-11-09T04:14:23.3372531Z 
+2026-11-09T04:14:23.3372779Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-09T04:14:23.3373152Z 104 passed, 2 warnings in 5.14s
+2026-11-09T04:14:31.4146564Z ....................................                                     [100%]
+2026-11-09T04:14:31.4147477Z ============================== warnings summary ===============================
+2026-11-09T04:14:31.4148223Z ..\..\..\..\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373
+2026-11-09T04:14:31.4149127Z   C:\PR\kvpress-gpu-venv-20261107\Lib\site-packages\_pytest\config\__init__.py:1373: PytestConfigWarning: Unknown config option: timeout
+2026-11-09T04:14:31.4149758Z   
+2026-11-09T04:14:31.4150312Z     self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+2026-11-09T04:14:31.4150661Z 
+2026-11-09T04:14:31.4150988Z D:\Python\Lib\site-packages\setuptools\command\easy_install.py:41
+2026-11-09T04:14:31.4152057Z   D:\Python\Lib\site-packages\setuptools\command\easy_install.py:41: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+2026-11-09T04:14:31.4154180Z     import pkg_resources
+2026-11-09T04:14:31.4154482Z 
+2026-11-09T04:14:31.4154881Z ..\..\..\..\deepmd-loss-deps-20261109\paddle\utils\cpp_extension\extension_utils.py:712
+2026-11-09T04:14:31.4156255Z   C:\PR\deepmd-loss-deps-20261109\paddle\utils\cpp_extension\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+2026-11-09T04:14:31.4157791Z     warnings.warn(warning_message)
+2026-11-09T04:14:31.4158068Z 
+2026-11-09T04:14:31.4158410Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-11-09T04:14:31.4158913Z 36 passed, 3 warnings in 2.92s
+2026-11-09T04:14:31.8896747Z Post job cleanup.
+2026-11-09T04:14:32.0191791Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:14:32.0626810Z git version 2.56.0.windows.4
+2026-11-09T04:14:32.0680161Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\5e0d87a3-8d47-4fc2-9104-8897311cbebc\.gitconfig'
+2026-11-09T04:14:32.0703206Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\5e0d87a3-8d47-4fc2-9104-8897311cbebc' before making global git config changes
+2026-11-09T04:14:32.0703970Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:14:32.0713134Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\baseline
+2026-11-09T04:14:32.1179849Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:14:32.1542734Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:14:32.8908512Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:14:32.9299894Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:14:33.7264325Z Post job cleanup.
+2026-11-09T04:14:33.8486625Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:14:33.8834928Z git version 2.56.0.windows.4
+2026-11-09T04:14:33.8887599Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\54177168-45b1-4ff6-89ee-9a1341a7d46e\.gitconfig'
+2026-11-09T04:14:33.8908136Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\54177168-45b1-4ff6-89ee-9a1341a7d46e' before making global git config changes
+2026-11-09T04:14:33.8908909Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:14:33.8916509Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf\patched
+2026-11-09T04:14:33.9319458Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:14:33.9671599Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:14:34.6752806Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:14:34.7161716Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:14:35.5073446Z Post job cleanup.
+2026-11-09T04:14:35.6251171Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" version
+2026-11-09T04:14:35.6612027Z git version 2.56.0.windows.4
+2026-11-09T04:14:35.6661302Z Copying 'C:\Users\***\.gitconfig' to 'C:\PR\github-gpu-runner-20261106\_work\_temp\ce08d92e-eb40-453e-a45f-e7955d706d9d\.gitconfig'
+2026-11-09T04:14:35.6684416Z Temporarily overriding HOME='C:\PR\github-gpu-runner-20261106\_work\_temp\ce08d92e-eb40-453e-a45f-e7955d706d9d' before making global git config changes
+2026-11-09T04:14:35.6685195Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T04:14:35.6690928Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --global --add safe.directory C:\PR\github-gpu-runner-20261106\_work\deepmd-loss-gpu-validation-20261109-dd573a77bf\deepmd-loss-gpu-validation-20261109-dd573a77bf
+2026-11-09T04:14:35.7055958Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T04:14:35.7413587Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-09T04:14:36.3989712Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T04:14:36.4339944Z [command]"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-09T04:14:37.1460933Z Cleaning up orphan processes
+2026-11-09T04:14:37.1627035Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
